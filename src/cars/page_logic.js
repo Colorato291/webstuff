@@ -20,6 +20,7 @@ document.querySelectorAll('#days_input, #hours_input, #minutes_input').forEach(f
             }
         }
         document.getElementById('distance_input').classList.add('visible');
+        document.getElementById('kilometer_input').disabled = false;
     });
 });
 
@@ -35,6 +36,7 @@ document.getElementById('kilometer_input').addEventListener('input', function() 
         }
     }
     document.getElementById('calculate_button').classList.add('visible');
+    document.getElementById('data_submission').disabled = false;
 });
 
 function dataSubmission() {
@@ -93,14 +95,14 @@ function generateForm(rentConditions){
     const { minutes = 0, hours = 0, days = 0, weeks = 0, kilometers = 0 } = rentConditions;
     let timeComponents = [];
 
-    if (weeks > 0) timeComponents.push(`${weeks} w.`);
-    if (days > 0) timeComponents.push(`${days} d.`);
-    if (hours > 0) timeComponents.push(`${hours} h.`);
-    if (minutes > 0) timeComponents.push(`${minutes} min.`);
+    if (weeks > 0) timeComponents.push(`${weeks} w`);
+    if (days > 0) timeComponents.push(`${days} d`);
+    if (hours > 0) timeComponents.push(`${hours} h`);
+    if (minutes > 0) timeComponents.push(`${minutes} min`);
 
     let timeString = timeComponents.join(' ');
 
-    timeString += ` + ${kilometers} km.`;
+    timeString += ` + ${kilometers} km`;
     return timeString;
 }
 
@@ -156,7 +158,6 @@ async function priceCalculations(inputData){
                 }
             }
             ({minutes, hours, days, weeks} = timeData);
-            console.log(minutes, hours, days, weeks);
             const time_price = (
                 (car.minute_rate || 0)*minutes+
                 (car.hour_rate || 0)*hours+
@@ -166,12 +167,32 @@ async function priceCalculations(inputData){
             // Distance Related pricing
             const distance_price = (
                 car.distance_rate*
-                Math.max(inputData.kilometers-car.inlcuded_distance, 0)
+                Math.max(kilometers-car.included_distance, 0)
             );
             const total_price = parseFloat(distance_price + time_price + car.start_fee).toFixed(2);
             result_data_payload.push(
                 [company.name, car.car_model, generateForm({minutes, hours, days, weeks, kilometers}), total_price]
             );
+            if(car.trip_packages !== null) {
+                let cheapestPackagePrice = Infinity;
+                let packageFound = false;
+                let cheapestPackageName = null;
+                car.trip_packages.forEach(package => {
+                    console.log('distance: ', kilometers)
+                    if(package.included_distance >= kilometers
+                    && package.duration >= minutes/60+hours+days*24+weeks*24*7
+                    && package.price <= cheapestPackagePrice){
+                        cheapestPackagePrice = parseFloat(package.price).toFixed(2);
+                        cheapestPackageName = package.name.toLowerCase()
+                        packageFound = true;
+                    }
+                });
+                if (packageFound === true) {
+                    result_data_payload.push(
+                        [company.name, car.car_model, `Package: ${cheapestPackageName}`, cheapestPackagePrice]
+                    );
+                }
+            }
         });
     });
     createTable(result_data_payload);

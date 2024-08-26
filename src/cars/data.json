@@ -11,283 +11,283 @@
             "day_rate": 21.49,
             "week_rate": null,
             "distance_rate": 0.29,
-            "inlcuded_distance": 0,
+            "included_distance": 0,
             "trip_packages": [
               {
                 "name": "270 MIN. + 310 KM",
                 "duration": 4.5,
                 "included_distance": 310,
-                "price": "99"
+                "price": 99
               },
               {
                 "name": "300 MIN. + 350 KM",
                 "duration": 5.0,
                 "included_distance": 350,
-                "price": "99"
+                "price": 99
               },
               {
                 "name": "1 D + 75 KM",
                 "duration": 24,
                 "included_distance": 75,
-                "price": "35.4"
+                "price": 35.4
               },
               {
                 "name": "2 D + 150 KM",
                 "duration": 48,
                 "included_distance": 150,
-                "price": "69.9"
+                "price": 69.9
               },
               {
                 "name": "30 MIN. + 5 KM",
                 "duration": 0.5,
                 "included_distance": 5,
-                "price": "4.99"
+                "price": 4.99
               },
               {
                 "name": "30 MIN. + 20 KM",
                 "duration": 0.5,
                 "included_distance": 20,
-                "price": "6.19"
+                "price": 6.19
               },
               {
                 "name": "1 H + 5 KM",
                 "duration": 1,
                 "included_distance": 5,
-                "price": "7.19"
+                "price": 7.19
               },
               {
                 "name": "1 H + 10 KM",
                 "duration": 1,
                 "included_distance": 10,
-                "price": "8.59"
+                "price": 8.59
               },
               {
                 "name": "1 H + 25 KM",
                 "duration": 1,
                 "included_distance": 25,
-                "price": "12.39"
+                "price": 12.39
               },
               {
                 "name": "2 H + 20 KM",
                 "duration": 2,
                 "included_distance": 20,
-                "price": "16.39"
+                "price": 16.39
               },
               {
                 "name": "2 H + 35 KM",
                 "duration": 2,
                 "included_distance": 35,
-                "price": "20.39"
+                "price": 20.39
               },
               {
                 "name": "2 H + 45 KM",
                 "duration": 2,
                 "included_distance": 45,
-                "price": "22.79"
+                "price": 22.79
               },
               {
                 "name": "3 H + 15 KM",
                 "duration": 3,
                 "included_distance": 15,
-                "price": "20.39"
+                "price": 20.39
               },
               {
                 "name": "3 H + 30 KM",
                 "duration": 3,
                 "included_distance": 30,
-                "price": "24.39"
+                "price": 24.39
               },
               {
                 "name": "3 H + 75 KM",
                 "duration": 3,
                 "included_distance": 75,
-                "price": "35.99"
+                "price": 35.99
               },
               {
                 "name": "4 H + 40 KM",
                 "duration": 4,
                 "included_distance": 40,
-                "price": "32.19"
+                "price": 32.19
               },
               {
                 "name": "9 H + 100 KM",
                 "duration": 9,
                 "included_distance": 100,
-                "price": "45.19"
+                "price": 45.19
               },
               {
                 "name": "9 H + 250 KM",
                 "duration": 9,
                 "included_distance": 250,
-                "price": "84.79"
+                "price": 84.79
               },
               {
                 "name": "12 H + 60 KM",
                 "duration": 12,
                 "included_distance": 60,
-                "price": "35.59"
+                "price": 35.59
               },
               {
                 "name": "12 H + 150 KM",
                 "duration": 12,
                 "included_distance": 150,
-                "price": "58.39"
+                "price": 58.39
               },
               {
                 "name": "1 D + 25 KM",
                 "duration": 24,
                 "included_distance": 25,
-                "price": "25.9"
+                "price": 25.9
               },
               {
                 "name": "1 D + 50 KM",
                 "duration": 24,
                 "included_distance": 50,
-                "price": "32.4"
+                "price": 32.4
               },
               {
                 "name": "1 D + 100 KM",
                 "duration": 24,
                 "included_distance": 100,
-                "price": "45.4"
+                "price": 45.4
               },
               {
                 "name": "1 D + 150 KM",
                 "duration": 24,
                 "included_distance": 150,
-                "price": "58.4"
+                "price": 58.4
               },
               {
                 "name": "1 D + 250 KM",
                 "duration": 24,
                 "included_distance": 250,
-                "price": "84.9"
+                "price": 84.9
               },
               {
                 "name": "1 D + 350 KM",
                 "duration": 24,
                 "included_distance": 350,
-                "price": "111.9"
+                "price": 111.9
               },
               {
                 "name": "2 D + 50 KM",
                 "duration": 48,
                 "included_distance": 50,
-                "price": "50.9"
+                "price": 50.9
               },
               {
                 "name": "2 D + 100 KM",
                 "duration": 48,
                 "included_distance": 100,
-                "price": "63.9"
+                "price": 63.9
               },
               {
                 "name": "2 D + 250 KM",
                 "duration": 48,
                 "included_distance": 250,
-                "price": "103.9"
+                "price": 103.9
               },
               {
                 "name": "2 D + 400 KM",
                 "duration": 48,
                 "included_distance": 400,
-                "price": "143.9"
+                "price": 143.9
               },
               {
                 "name": "3 D + 100 KM",
                 "duration": 72,
                 "included_distance": 100,
-                "price": "82.4"
+                "price": 82.4
               },
               {
                 "name": "3 D + 175 KM",
                 "duration": 72,
                 "included_distance": 175,
-                "price": "102.4"
+                "price": 102.4
               },
               {
                 "name": "3 D + 200 KM",
                 "duration": 72,
                 "included_distance": 200,
-                "price": "108.9"
+                "price": 108.9
               },
               {
                 "name": "3 D + 300 KM",
                 "duration": 72,
                 "included_distance": 300,
-                "price": "135.4"
+                "price": 135.4
               },
               {
                 "name": "3 D + 500 KM",
                 "duration": 72,
                 "included_distance": 500,
-                "price": "189.4"
+                "price": 189.4
               },
               {
                 "name": "5 D + 150 KM",
                 "duration": 120,
                 "included_distance": 150,
-                "price": "147.4"
+                "price": 147.4
               },
               {
                 "name": "5 D + 250 KM",
                 "duration": 120,
                 "included_distance": 250,
-                "price": "173.9"
+                "price": 173.9
               },
               {
                 "name": "5 D + 450 KM",
                 "duration": 120,
                 "included_distance": 450,
-                "price": "227.4"
+                "price": 227.4
               },
               {
                 "name": "7 D + 200 KM",
                 "duration": 168,
                 "included_distance": 200,
-                "price": "182.9"
+                "price": 182.9
               },
               {
                 "name": "7 D + 400 KM",
                 "duration": 168,
                 "included_distance": 400,
-                "price": "236.4"
+                "price": 236.4
               },
               {
                 "name": "7 D + 600 KM",
                 "duration": 168,
                 "included_distance": 600,
-                "price": "290.9"
+                "price": 290.9
               },
               {
                 "name": "7 D + 900 KM",
                 "duration": 168,
                 "included_distance": 900,
-                "price": "373.4"
+                "price": 373.4
               },
               {
                 "name": "14 D + 600 KM",
                 "duration": 336,
                 "included_distance": 600,
-                "price": "419.4"
+                "price": 419.4
               },
               {
                 "name": "14 D + 1000 KM",
                 "duration": 336,
                 "included_distance": 1000,
-                "price": "529.9"
+                "price": 529.9
               },
               {
                 "name": "28 D + 1800 KM",
                 "duration": 672,
                 "included_distance": 1800,
-                "price": "1008.4"
+                "price": 1008.4
               },
               {
                 "name": "28 D + 2500 KM",
                 "duration": 672,
                 "included_distance": 2500,
-                "price": "1210.9"
+                "price": 1210.9
               }
             ]
           }
@@ -304,7 +304,7 @@
             "day_rate": 22.99,
             "week_rate": null,
             "distance_rate": 0.17,
-            "inlcuded_distance": 0,
+            "included_distance": 0,
             "trip_packages": null
           },
           {
@@ -315,7 +315,7 @@
             "day_rate": 23.99,
             "week_rate": null,
             "distance_rate": 0.19,
-            "inlcuded_distance": 0,
+            "included_distance": 0,
             "trip_packages": null
           },
           {
@@ -326,7 +326,7 @@
             "day_rate": 23.99,
             "week_rate": null,
             "distance_rate": 0.19,
-            "inlcuded_distance": 0,
+            "included_distance": 0,
             "trip_packages": null
           },
           {
@@ -337,7 +337,7 @@
             "day_rate": 25.99,
             "week_rate": null,
             "distance_rate": 0.23,
-            "inlcuded_distance": 0,
+            "included_distance": 0,
             "trip_packages": null
           },
           {
@@ -348,7 +348,7 @@
             "day_rate": 35.99,
             "week_rate": null,
             "distance_rate": 0.24,
-            "inlcuded_distance": 0,
+            "included_distance": 0,
             "trip_packages": null
           },
           {
@@ -359,7 +359,7 @@
             "day_rate": 35.99,
             "week_rate": null,
             "distance_rate": 0.24,
-            "inlcuded_distance": 0,
+            "included_distance": 0,
             "trip_packages": null
           },
           {
@@ -370,7 +370,7 @@
             "day_rate": 34.99,
             "week_rate": null,
             "distance_rate": 0.1,
-            "inlcuded_distance": 0,
+            "included_distance": 0,
             "trip_packages": null
           },
           {
@@ -381,7 +381,7 @@
             "day_rate": 39.99,
             "week_rate": null,
             "distance_rate": 0.25,
-            "inlcuded_distance": 0,
+            "included_distance": 0,
             "trip_packages": null
           }
         ]
@@ -397,7 +397,7 @@
             "day_rate": 15.89,
             "week_rate": null,
             "distance_rate": 0.25,
-            "inlcuded_distance": 0,
+            "included_distance": 0,
             "trip_packages": null
           },
           {
@@ -408,7 +408,7 @@
             "day_rate": 15.89,
             "week_rate": null,
             "distance_rate": 0.25,
-            "inlcuded_distance": 0,
+            "included_distance": 0,
             "trip_packages": null
           },
           {
@@ -419,7 +419,7 @@
             "day_rate": 15.89,
             "week_rate": null,
             "distance_rate": 0.25,
-            "inlcuded_distance": 0,
+            "included_distance": 0,
             "trip_packages": null
           },
           {
@@ -430,7 +430,7 @@
             "day_rate": 18.90,
             "week_rate": null,
             "distance_rate": 0.26,
-            "inlcuded_distance": 0,
+            "included_distance": 0,
             "trip_packages": null
           },
           {
@@ -441,7 +441,7 @@
             "day_rate": 17.56,
             "week_rate": null,
             "distance_rate": 0.26,
-            "inlcuded_distance": 0,
+            "included_distance": 0,
             "trip_packages": null
           },
           {
@@ -452,7 +452,7 @@
             "day_rate": 17.56,
             "week_rate": null,
             "distance_rate": 0.26,
-            "inlcuded_distance": 0,
+            "included_distance": 0,
             "trip_packages": null
           },
           {
@@ -463,7 +463,7 @@
             "day_rate": 17.56,
             "week_rate": null,
             "distance_rate": 0.26,
-            "inlcuded_distance": 0,
+            "included_distance": 0,
             "trip_packages": null
           },
           {
@@ -474,7 +474,7 @@
             "day_rate": 19.24,
             "week_rate": null,
             "distance_rate": 0.27,
-            "inlcuded_distance": 0,
+            "included_distance": 0,
             "trip_packages": null
           },
           {
@@ -485,7 +485,7 @@
             "day_rate": 19.24,
             "week_rate": null,
             "distance_rate": 0.27,
-            "inlcuded_distance": 0,
+            "included_distance": 0,
             "trip_packages": null
           },
           {
@@ -496,7 +496,7 @@
             "day_rate": 22.90,
             "week_rate": null,
             "distance_rate": 0.27,
-            "inlcuded_distance": 0,
+            "included_distance": 0,
             "trip_packages": null
           },
           {
@@ -507,7 +507,7 @@
             "day_rate": 19.24,
             "week_rate": null,
             "distance_rate": 0.26,
-            "inlcuded_distance": 0,
+            "included_distance": 0,
             "trip_packages": null
           },
           {
@@ -518,7 +518,7 @@
             "day_rate": 19.24,
             "week_rate": null,
             "distance_rate": 0.27,
-            "inlcuded_distance": 0,
+            "included_distance": 0,
             "trip_packages": null
           },
           {
@@ -529,7 +529,7 @@
             "day_rate": 40.24,
             "week_rate": null,
             "distance_rate": 0.28,
-            "inlcuded_distance": 0,
+            "included_distance": 0,
             "trip_packages": null
           },
           {
@@ -540,7 +540,7 @@
             "day_rate": 31.84,
             "week_rate": null,
             "distance_rate": 0.28,
-            "inlcuded_distance": 0,
+            "included_distance": 0,
             "trip_packages": null
           },
           {
@@ -551,7 +551,7 @@
             "day_rate": 99.90,
             "week_rate": null,
             "distance_rate": 0.30,
-            "inlcuded_distance": 0,
+            "included_distance": 0,
             "trip_packages": null
           }
         ]
@@ -567,7 +567,7 @@
             "day_rate": 39,
             "week_rate": 269,
             "distance_rate": 0.29,
-            "inlcuded_distance": 0,
+            "included_distance": 0,
             "trip_packages": null
           },
           {
@@ -578,7 +578,7 @@
             "day_rate": 49,
             "week_rate": 339,
             "distance_rate": 0.29,
-            "inlcuded_distance": 0,
+            "included_distance": 0,
             "trip_packages": null
           },
           {
@@ -589,7 +589,7 @@
             "day_rate": 59,
             "week_rate": 369,
             "distance_rate": 0.29,
-            "inlcuded_distance": 0,
+            "included_distance": 0,
             "trip_packages": null
           },
           {
@@ -600,7 +600,7 @@
             "day_rate": 59,
             "week_rate": 369,
             "distance_rate": 0.29,
-            "inlcuded_distance": 0,
+            "included_distance": 0,
             "trip_packages": null
           },
           {
@@ -611,7 +611,7 @@
             "day_rate": 69,
             "week_rate": 399,
             "distance_rate": 0.29,
-            "inlcuded_distance": 0,
+            "included_distance": 0,
             "trip_packages": null
           },
           {
@@ -622,7 +622,7 @@
             "day_rate": 89,
             "week_rate": 499,
             "distance_rate": 0.29,
-            "inlcuded_distance": 0,
+            "included_distance": 0,
             "trip_packages": null
           },
           {
@@ -633,7 +633,7 @@
             "day_rate": 109,
             "week_rate": 599,
             "distance_rate": 0.29,
-            "inlcuded_distance": 0,
+            "included_distance": 0,
             "trip_packages": null
           }
         ]
@@ -649,7 +649,7 @@
             "day_rate": 24.5,
             "week_rate": null,
             "distance_rate": 0.22,
-            "inlcuded_distance": 0,
+            "included_distance": 0,
             "trip_packages": null
           }
         ]

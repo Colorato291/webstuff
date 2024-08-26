@@ -52,7 +52,7 @@ for i in range(1, 47):
     distance_value = int(re.search(r'\d+', duration_parts[1]).group())
     
     pack_price_text = pack_price.text
-    cleaned_price = pack_price_text.strip().replace('€', '')
+    cleaned_price = float(pack_price_text.strip().replace('€', ''))
 
     package = {
         "name": pack_duration_text,
