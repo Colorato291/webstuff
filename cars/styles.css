@@ -1,0 +1,96 @@
+html, body {
+    background-color: aliceblue;
+    font-family: 'Avantgarde', 'TeX Gyre Adventor', 'URW Gothic L', sans-serif; /* Apply font globally */
+}
+
+#duration_input,
+#title,
+#distance_input,
+#calculate_button
+ {
+    text-align: center;
+    margin-top: 20px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+#calculate_button{
+    margin-top: 10px;
+}
+
+input[type=number] {
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    width: 80px;
+    height: 25px;
+    text-align: right;
+    border-radius: 5px;
+    border-width: thin;
+    text-align: left;
+    margin-right: 10px;
+    padding-left: 10px;
+}
+
+input[type=button] {
+    color: white;
+    background-color:dodgerblue;
+    border: none;
+    margin-top: 10px;
+    width: 92px;
+    height: 30px;
+    text-align: center;
+    border-radius: 5px;
+    border-width: thin;
+    margin-right: 10px;
+    cursor: pointer;
+}
+input[type=button]:hover{
+    background-color: deepskyblue;
+}
+
+#title.visible,
+#duration_input.visible,
+#distance_input.visible,
+#calculate_button.visible {
+    opacity: 1;
+}
+
+#title {
+    text-align: center;
+    margin-top: 100px;
+    font-size: 40px;
+    font-family: 'Avantgarde', 'TeX Gyre Adventor', 'URW Gothic L', sans-serif;
+    margin-bottom: 20px;
+}
+
+table {
+    margin-top: 30px;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    border-collapse: separate; /* Allows spacing between rows */
+    border-spacing: 0 5px; /* Space between rows */
+}
+
+tr {
+    border: 1px solid #666; /* Dark gray border for each row */
+    background-color: white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for a raised effect */
+    border-radius: 10px; /* Rounds the corners of the row */
+}
+
+td, th {
+    border: none;
+    padding: 15px; /* Add some padding to the cells */
+}
+
+/* First and last cell in each row for rounded corners */
+tr td:first-child, tr th:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+tr td:last-child, tr th:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
