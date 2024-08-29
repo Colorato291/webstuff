@@ -91,6 +91,20 @@ async function fetchData() {
     }
 }
 
+function convertTime(hours) {
+    const minutes = Math.floor((hours % 1) * 60);
+    const remainingHours = Math.floor(hours % 24);
+    const days = Math.floor((hours / 24) % 7);
+    const weeks = Math.floor(hours / (24 * 7));
+
+    return {
+        minutes,
+        hours: remainingHours,
+        days,
+        weeks
+    };
+}
+
 function generateForm(rentConditions){
     const { minutes = 0, hours = 0, days = 0, weeks = 0, kilometers = 0 } = rentConditions;
     let timeComponents = [];
@@ -102,8 +116,66 @@ function generateForm(rentConditions){
 
     let timeString = timeComponents.join(' ');
 
-    timeString += ` + ${kilometers} km`;
+    if (timeComponents.length > 0) {
+        timeString += ` + ${kilometers} km`;
+    } else {
+        timeString = `${kilometers} km`; // If no time components, just show kilometers
+    }
+
     return timeString;
+}
+
+function calculateDurationPrice(timeData, car, companyName){
+    let { minutes = 0, hours = 0, days = 0, weeks = 0} = timeData;
+
+    weeks += Math.floor(days/7);
+    days %= 7;
+
+    if (!car.week_rate){
+        days += weeks*7
+        weeks = 0;
+    }
+    if (!car.day_rate) {
+        hours = days*24
+        days = 0;
+    }
+    if (!car.hour_rate) {
+        minutes += hours*60
+        hours = 0;
+    }
+    
+    if (companyName == "Avis Now" && minutes%15 !== 0){
+        minutes += (15-minutes%15);
+    }
+
+    let optimizedDuration = {minutes, hours, days, weeks};
+    const units = Object.keys(optimizedDuration);
+    
+    for(let i = 0; i < units.length - 1; i++){
+        const currentUnit = units[i];
+        const currentRate = car[`${currentUnit.slice(0, -1)}_rate`];
+        if (currentRate !== null){
+            for (let j = i+1; j < units.length - 1; j++){
+                const nextUnit = units[j];
+                const nextRate = car[`${nextUnit.slice(0, -1)}_rate`];
+                if (nextRate !== null && currentRate * optimizedDuration[currentUnit] >= nextRate) {
+                    optimizedDuration[nextUnit]++;
+                    Object.keys(optimizedDuration).slice(0, j).forEach(key => {
+                        optimizedDuration[key] = 0;
+                    })
+                    break;
+                }
+            }
+        }
+    }
+    ({minutes, hours, days, weeks} = optimizedDuration);
+    const time_price = (
+        (car.minute_rate || 0)*minutes+
+        (car.hour_rate || 0)*hours+
+        (car.day_rate || 0)*days+
+        (car.week_rate || 0)*weeks
+    );
+    return {time_price, optimizedDuration};
 }
 
 async function priceCalculations(inputData){ 
@@ -115,83 +187,38 @@ async function priceCalculations(inputData){
     let result_data_payload = [];
     price_database["companies"].forEach(company =>{ // iterate over companies
         company.cars.forEach(car => {
-            let { minutes = 0, hours = 0, days = 0, weeks = 0, kilometers = 0 } = inputData;
-
-            weeks += Math.floor(days/7);
-            days %= 7;
-
-            if (car.week_rate == null){
-                days += weeks*7
-                weeks = 0;
-            }
-            if (car.day_rate == null) {
-                hours = days*24
-                days = 0;
-            }
-            if (car.hour_rate == null) {
-                minutes += hours*60
-                hours = 0;
-            }
-            
-            if (company.name == "Avis Now" && minutes%15 !== 0){
-                minutes += (15-minutes%15);
-            }
-
-            let timeData = {minutes, hours, days, weeks};
-            const units = Object.keys(timeData);
-            
-            for(let i = 0; i < units.length - 1; i++){
-                const currentUnit = units[i];
-                const currentRate = car[`${currentUnit.slice(0, -1)}_rate`];
-                if (currentRate !== null){
-                    for (let j = i+1; j < units.length - 1; j++){
-                        const nextUnit = units[j];
-                        const nextRate = car[`${nextUnit.slice(0, -1)}_rate`];
-                        if (nextRate !== null && currentRate * timeData[currentUnit] >= nextRate) {
-                            timeData[nextUnit]++;
-                            Object.keys(timeData).slice(0, j).forEach(key => {
-                                timeData[key] = 0;
-                            })
-                            break;
-                        }
-                    }
-                }
-            }
-            ({minutes, hours, days, weeks} = timeData);
-            const time_price = (
-                (car.minute_rate || 0)*minutes+
-                (car.hour_rate || 0)*hours+
-                (car.day_rate || 0)*days+
-                (car.week_rate || 0)*weeks
-            );
+            const {kilometers, ...timeData} = inputData;
+            const {time_price, optimizedDuration} = calculateDurationPrice(timeData, car, company.name);
             // Distance Related pricing
             const distance_price = (
                 car.distance_rate*
-                Math.max(kilometers-car.included_distance, 0)
+                Math.max(inputData.kilometers-car.included_distance, 0)
             );
             const total_price = parseFloat(distance_price + time_price + car.start_fee).toFixed(2);
             result_data_payload.push(
-                [company.name, car.car_model, generateForm({minutes, hours, days, weeks, kilometers}), total_price]
+                [company.name, car.car_model, generateForm({...optimizedDuration, kilometers}), total_price]
             );
             if(car.trip_packages !== null) {
                 let cheapestPackagePrice = Infinity;
-                let packageFound = false;
                 let cheapestPackageName = null;
                 car.trip_packages.forEach(package => {
-                    console.log('distance: ', kilometers)
-                    if(package.included_distance >= kilometers
-                    && package.duration >= minutes/60+hours+days*24+weeks*24*7
-                    && package.price <= cheapestPackagePrice){
-                        cheapestPackagePrice = parseFloat(package.price).toFixed(2);
-                        cheapestPackageName = package.name.toLowerCase()
-                        packageFound = true;
+                    let [packageKilometers, packageDuration, packagePrice, packageName] =
+                    [package.included_distance, package.duration, package.price, package.name.toLowerCase()];
+                    const convertedTime = timeData.minutes/60+timeData.hours+timeData.days*24+timeData.weeks*24*7;
+                    const additionalDuration = Math.max(convertedTime-packageDuration, 0);
+                    const additionalKilometers = Math.max(inputData.kilometers-packageKilometers, 0);
+                    let {time_price: additionalPrice, optimizedDuration: additionalForm} = calculateDurationPrice(convertTime(additionalDuration), car, company.name);
+                    packagePrice = packagePrice + additionalPrice + additionalKilometers*car.distance_rate;
+                    additionalForm = generateForm({...additionalForm, kilometers: additionalKilometers});
+                    packageName += ` | Additionally: ${additionalForm}`
+                    if (cheapestPackagePrice >= packagePrice){
+                        cheapestPackageName = packageName;
+                        cheapestPackagePrice = packagePrice;
                     }
                 });
-                if (packageFound === true) {
-                    result_data_payload.push(
-                        [company.name, car.car_model, `Package: ${cheapestPackageName}`, cheapestPackagePrice]
-                    );
-                }
+                result_data_payload.push(
+                    [company.name, car.car_model, `Package: ${cheapestPackageName}`, parseFloat(cheapestPackagePrice).toFixed(2)]
+                );
             }
         });
     });
