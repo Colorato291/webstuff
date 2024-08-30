@@ -383,6 +383,28 @@
             "distance_rate": 0.25,
             "included_distance": 0,
             "trip_packages": null
+          },
+          {
+            "car_model": "Tesla Model 3 Long Range",
+            "start_fee": 0.99,
+            "minute_rate": 0.15,
+            "hour_rate": null,
+            "day_rate": 39.99,
+            "week_rate": null,
+            "distance_rate": 0.25,
+            "included_distance": 0,
+            "trip_packages": null
+          },
+          {
+            "car_model": "Tesla Model 3 Performance",
+            "start_fee": 0.99,
+            "minute_rate": 0.19,
+            "hour_rate": null,
+            "day_rate": 59.99,
+            "week_rate": null,
+            "distance_rate": 0.25,
+            "included_distance": 0,
+            "trip_packages": null
           }
         ]
       },
