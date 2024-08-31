@@ -15,6 +15,8 @@ body, html {
 }
 
 #welcome {
+    display: flex;
+    align-items: center;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -22,4 +24,22 @@ body, html {
     font-weight: 300;
     font-size: 48px;
     color: white;
+}
+
+.cool_cat_img {
+    height: 200px;
+    width: 200px;
+    opacity: 0;
+    z-index: 2;
+    transition: opacity 1s ease-in;
+    border-radius: 50%;
+}
+
+.welcome-text {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    z-index: 1;
+    white-space: nowrap;
 }
