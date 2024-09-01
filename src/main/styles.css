@@ -3,6 +3,12 @@ body, html {
     padding: 0;
     overflow-x: hidden;
     font-family: 'DM Sans', system-ui;
+    color: white;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
 }
 
 #background {
@@ -15,6 +21,7 @@ body, html {
 }
 
 #welcome {
+    order: 0;
     display: flex;
     align-items: center;
     position: absolute;
@@ -23,7 +30,6 @@ body, html {
     transform: translate(-50%, -50%);
     font-weight: 300;
     font-size: 48px;
-    color: white;
 }
 
 .cool_cat_img {
@@ -42,4 +48,8 @@ body, html {
     opacity: 0;
     z-index: 1;
     white-space: nowrap;
+}
+
+#about{
+    padding: 20px;
 }
