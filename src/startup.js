@@ -2,7 +2,8 @@ function startAnimation() {
     const img = document.querySelector('.cool_cat_img');
     const text = document.querySelector('.welcome-text');
     const welcome = document.getElementById('welcome');
-
+    const about = document.getElementById('about');
+    const projects = document.getElementById('projects');
     // Fade in image
     setTimeout(() => {
         img.style.opacity = '1';
@@ -33,13 +34,15 @@ function startAnimation() {
     }, 4000);
 
     setTimeout(() => {
-        
+        about.style.transition = 'opacity 1s ease-in';
+        about.style.opacity = '1';
+        about.style.userSelect = 'auto';
+
+        projects.style.transition = 'opacity 1s ease-in';
+        projects.style.opacity = '1';
+        projects.style.userSelect = 'auto';
+
+        welcome.style.removeProperty('transition');
     }, 5500)
 }
-
-// Run the animation when the DOM is fully loaded
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', startAnimation);
-} else {
-    startAnimation();
-}
+startAnimation();
