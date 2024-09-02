@@ -379,7 +379,7 @@
             "minute_rate": 0.15,
             "hour_rate": null,
             "day_rate": 39.99,
-            "week_rate": null,
+            "week_rate": 251.94,
             "distance_rate": 0.25,
             "included_distance": 0,
             "trip_packages": null
@@ -390,7 +390,7 @@
             "minute_rate": 0.15,
             "hour_rate": null,
             "day_rate": 39.99,
-            "week_rate": null,
+            "week_rate": 251.94,
             "distance_rate": 0.25,
             "included_distance": 0,
             "trip_packages": null
@@ -402,6 +402,17 @@
             "hour_rate": null,
             "day_rate": 59.99,
             "week_rate": null,
+            "distance_rate": 0.25,
+            "included_distance": 0,
+            "trip_packages": null
+          },
+          {
+            "car_model": "Tesla Model Y Standard Range",
+            "start_fee": 0.99,
+            "minute_rate": 0.19,
+            "hour_rate": null,
+            "day_rate": 59.99,
+            "week_rate": 377.94,
             "distance_rate": 0.25,
             "included_distance": 0,
             "trip_packages": null
