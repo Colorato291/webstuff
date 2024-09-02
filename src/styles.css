@@ -50,10 +50,10 @@ body, html {
     opacity: 0;
     user-select: none;
     font-weight: 300;
-    font-size: 28px;
+    font-size: 24px;
     align-self: center;
     text-align: center;
-    margin-top: 150px;
+    margin-top: 175px;
 }
 #about p:first-of-type {
     margin-bottom: 5px;
