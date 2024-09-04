@@ -142,7 +142,7 @@ function generateForm(rentConditions){
 
     if (timeComponents.length > 0) {
         timeString += ` + ${kilometers} km`;
-    } else {
+    } else if (kilometers !== 0) {
         timeString = `${kilometers} km`; // If no time components, just show kilometers
     }
 
@@ -234,7 +234,9 @@ async function priceCalculations(inputData){
                     let {time_price: additionalPrice, optimizedDuration: additionalForm} = calculateDurationPrice(convertTime(additionalDuration), car, company.name);
                     packagePrice = packagePrice + additionalPrice + additionalKilometers*car.distance_rate;
                     additionalForm = generateForm({...additionalForm, kilometers: additionalKilometers});
-                    packageName += ` | Additionally: ${additionalForm}`
+                    if (additionalForm !== '') {
+                        packageName += ` | Additionally: ${additionalForm}`
+                    }
                     if (cheapestPackagePrice >= packagePrice){
                         cheapestPackageName = packageName;
                         cheapestPackagePrice = packagePrice;
