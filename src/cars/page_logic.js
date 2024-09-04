@@ -60,6 +60,9 @@ function createTable(priceData) {
     headers.forEach(headerText => {
         const th = document.createElement('th');
         th.textContent = headerText;
+        if (headerText == 'Price'){
+            th.setAttribute("onclick", "sortTable()");
+        }
         headerRow.appendChild(th);
     });
 
@@ -71,9 +74,30 @@ function createTable(priceData) {
             cell.textContent = cellData;
         });
     });
-
+    table.setAttribute("id", "price_table");
     table_div.innerHTML = '';
     table_div.appendChild(table);
+}
+
+let isAscending = true;
+function sortTable(ascending = isAscending) {
+    const table = document.getElementById("price_table");
+    const rows = Array.from(table.rows).slice(1);
+
+    rows.sort((a, b) => {
+        const priceA = parseFloat(a.cells[3].textContent);
+        const priceB = parseFloat(b.cells[3].textContent);
+        return ascending ? priceA - priceB : priceB - priceA;
+    });
+
+    const fragment = document.createDocumentFragment();
+    rows.forEach(row => fragment.appendChild(row));
+    table.tBodies[0].appendChild(fragment);
+
+    isAscending = !ascending;
+
+    const header = table.rows[0].cells[3];
+    header.textContent = `Price ${ascending ? '▲' : '▼'}`;
 }
 
 async function fetchData() {
