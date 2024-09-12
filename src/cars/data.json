@@ -1,691 +1,740 @@
 {
-    "companies": [
-      {
-        "name": "CityBee",
-        "cars": [
-          {
-            "car_model": "All cars",
-            "start_fee": 0.99,
-            "minute_rate": 0.13,
-            "hour_rate": 5.99,
-            "day_rate": 21.49,
-            "week_rate": null,
-            "distance_rate": 0.29,
-            "included_distance": 0,
-            "trip_packages": [
-              {
-                "name": "270 MIN. + 310 KM",
-                "duration": 4.5,
-                "included_distance": 310,
-                "price": 99
-              },
-              {
-                "name": "300 MIN. + 350 KM",
-                "duration": 5.0,
-                "included_distance": 350,
-                "price": 99
-              },
-              {
-                "name": "1 D + 75 KM",
-                "duration": 24,
-                "included_distance": 75,
-                "price": 35.4
-              },
-              {
-                "name": "2 D + 150 KM",
-                "duration": 48,
-                "included_distance": 150,
-                "price": 69.9
-              },
-              {
-                "name": "30 MIN. + 5 KM",
-                "duration": 0.5,
-                "included_distance": 5,
-                "price": 4.99
-              },
-              {
-                "name": "30 MIN. + 20 KM",
-                "duration": 0.5,
-                "included_distance": 20,
-                "price": 6.19
-              },
-              {
-                "name": "1 H + 5 KM",
-                "duration": 1,
-                "included_distance": 5,
-                "price": 7.19
-              },
-              {
-                "name": "1 H + 10 KM",
-                "duration": 1,
-                "included_distance": 10,
-                "price": 8.59
-              },
-              {
-                "name": "1 H + 25 KM",
-                "duration": 1,
-                "included_distance": 25,
-                "price": 12.39
-              },
-              {
-                "name": "2 H + 20 KM",
-                "duration": 2,
-                "included_distance": 20,
-                "price": 16.39
-              },
-              {
-                "name": "2 H + 35 KM",
-                "duration": 2,
-                "included_distance": 35,
-                "price": 20.39
-              },
-              {
-                "name": "2 H + 45 KM",
-                "duration": 2,
-                "included_distance": 45,
-                "price": 22.79
-              },
-              {
-                "name": "3 H + 15 KM",
-                "duration": 3,
-                "included_distance": 15,
-                "price": 20.39
-              },
-              {
-                "name": "3 H + 30 KM",
-                "duration": 3,
-                "included_distance": 30,
-                "price": 24.39
-              },
-              {
-                "name": "3 H + 75 KM",
-                "duration": 3,
-                "included_distance": 75,
-                "price": 35.99
-              },
-              {
-                "name": "4 H + 40 KM",
-                "duration": 4,
-                "included_distance": 40,
-                "price": 32.19
-              },
-              {
-                "name": "9 H + 100 KM",
-                "duration": 9,
-                "included_distance": 100,
-                "price": 45.19
-              },
-              {
-                "name": "9 H + 250 KM",
-                "duration": 9,
-                "included_distance": 250,
-                "price": 84.79
-              },
-              {
-                "name": "12 H + 60 KM",
-                "duration": 12,
-                "included_distance": 60,
-                "price": 35.59
-              },
-              {
-                "name": "12 H + 150 KM",
-                "duration": 12,
-                "included_distance": 150,
-                "price": 58.39
-              },
-              {
-                "name": "1 D + 25 KM",
-                "duration": 24,
-                "included_distance": 25,
-                "price": 25.9
-              },
-              {
-                "name": "1 D + 50 KM",
-                "duration": 24,
-                "included_distance": 50,
-                "price": 32.4
-              },
-              {
-                "name": "1 D + 100 KM",
-                "duration": 24,
-                "included_distance": 100,
-                "price": 45.4
-              },
-              {
-                "name": "1 D + 150 KM",
-                "duration": 24,
-                "included_distance": 150,
-                "price": 58.4
-              },
-              {
-                "name": "1 D + 250 KM",
-                "duration": 24,
-                "included_distance": 250,
-                "price": 84.9
-              },
-              {
-                "name": "1 D + 350 KM",
-                "duration": 24,
-                "included_distance": 350,
-                "price": 111.9
-              },
-              {
-                "name": "2 D + 50 KM",
-                "duration": 48,
-                "included_distance": 50,
-                "price": 50.9
-              },
-              {
-                "name": "2 D + 100 KM",
-                "duration": 48,
-                "included_distance": 100,
-                "price": 63.9
-              },
-              {
-                "name": "2 D + 250 KM",
-                "duration": 48,
-                "included_distance": 250,
-                "price": 103.9
-              },
-              {
-                "name": "2 D + 400 KM",
-                "duration": 48,
-                "included_distance": 400,
-                "price": 143.9
-              },
-              {
-                "name": "3 D + 100 KM",
-                "duration": 72,
-                "included_distance": 100,
-                "price": 82.4
-              },
-              {
-                "name": "3 D + 175 KM",
-                "duration": 72,
-                "included_distance": 175,
-                "price": 102.4
-              },
-              {
-                "name": "3 D + 200 KM",
-                "duration": 72,
-                "included_distance": 200,
-                "price": 108.9
-              },
-              {
-                "name": "3 D + 300 KM",
-                "duration": 72,
-                "included_distance": 300,
-                "price": 135.4
-              },
-              {
-                "name": "3 D + 500 KM",
-                "duration": 72,
-                "included_distance": 500,
-                "price": 189.4
-              },
-              {
-                "name": "5 D + 150 KM",
-                "duration": 120,
-                "included_distance": 150,
-                "price": 147.4
-              },
-              {
-                "name": "5 D + 250 KM",
-                "duration": 120,
-                "included_distance": 250,
-                "price": 173.9
-              },
-              {
-                "name": "5 D + 450 KM",
-                "duration": 120,
-                "included_distance": 450,
-                "price": 227.4
-              },
-              {
-                "name": "7 D + 200 KM",
-                "duration": 168,
-                "included_distance": 200,
-                "price": 182.9
-              },
-              {
-                "name": "7 D + 400 KM",
-                "duration": 168,
-                "included_distance": 400,
-                "price": 236.4
-              },
-              {
-                "name": "7 D + 600 KM",
-                "duration": 168,
-                "included_distance": 600,
-                "price": 290.9
-              },
-              {
-                "name": "7 D + 900 KM",
-                "duration": 168,
-                "included_distance": 900,
-                "price": 373.4
-              },
-              {
-                "name": "14 D + 600 KM",
-                "duration": 336,
-                "included_distance": 600,
-                "price": 419.4
-              },
-              {
-                "name": "14 D + 1000 KM",
-                "duration": 336,
-                "included_distance": 1000,
-                "price": 529.9
-              },
-              {
-                "name": "28 D + 1800 KM",
-                "duration": 672,
-                "included_distance": 1800,
-                "price": 1008.4
-              },
-              {
-                "name": "28 D + 2500 KM",
-                "duration": 672,
-                "included_distance": 2500,
-                "price": 1210.9
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "CarGuru",
-        "cars": [
-          {
-            "car_model": "Toyota Yaris",
-            "start_fee": 0.99,
-            "minute_rate": 0.07,
-            "hour_rate": null,
-            "day_rate": 22.99,
-            "week_rate": null,
-            "distance_rate": 0.17,
-            "included_distance": 0,
-            "trip_packages": null
+  "companies": [
+    {
+      "name": "CityBee",
+      "cars": [
+        {
+          "car_model": "All cars",
+          "start_fee": 0.99,
+          "time_rates": {
+            "minute": 0.13,
+            "hour": 5.99,
+            "day": 21.49
           },
-          {
-            "car_model": "Toyota Corolla",
-            "start_fee": 0.99,
-            "minute_rate": 0.09,
-            "hour_rate": null,
-            "day_rate": 23.99,
-            "week_rate": null,
-            "distance_rate": 0.19,
-            "included_distance": 0,
-            "trip_packages": null
+          "distance_rate": 0.29,
+          "included_distance": 0,
+          "trip_packages": [
+            {
+              "name": "270 MIN. + 310 KM",
+              "duration": 270,
+              "included_distance": 310,
+              "price": 99
+            },
+            {
+              "name": "300 MIN. + 350 KM",
+              "duration": 300,
+              "included_distance": 350,
+              "price": 99
+            },
+            {
+              "name": "1 D + 75 KM",
+              "duration": 1440,
+              "included_distance": 75,
+              "price": 35.4
+            },
+            {
+              "name": "2 D + 150 KM",
+              "duration": 2880,
+              "included_distance": 150,
+              "price": 69.9
+            },
+            {
+              "name": "30 MIN. + 5 KM",
+              "duration": 30,
+              "included_distance": 5,
+              "price": 4.99
+            },
+            {
+              "name": "30 MIN. + 20 KM",
+              "duration": 30,
+              "included_distance": 20,
+              "price": 6.19
+            },
+            {
+              "name": "1 H + 5 KM",
+              "duration": 60,
+              "included_distance": 5,
+              "price": 7.19
+            },
+            {
+              "name": "1 H + 10 KM",
+              "duration": 60,
+              "included_distance": 10,
+              "price": 8.59
+            },
+            {
+              "name": "1 H + 25 KM",
+              "duration": 60,
+              "included_distance": 25,
+              "price": 12.39
+            },
+            {
+              "name": "2 H + 20 KM",
+              "duration": 120,
+              "included_distance": 20,
+              "price": 16.39
+            },
+            {
+              "name": "2 H + 35 KM",
+              "duration": 120,
+              "included_distance": 35,
+              "price": 20.39
+            },
+            {
+              "name": "2 H + 45 KM",
+              "duration": 120,
+              "included_distance": 45,
+              "price": 22.79
+            },
+            {
+              "name": "3 H + 15 KM",
+              "duration": 180,
+              "included_distance": 15,
+              "price": 20.39
+            },
+            {
+              "name": "3 H + 30 KM",
+              "duration": 180,
+              "included_distance": 30,
+              "price": 24.39
+            },
+            {
+              "name": "3 H + 75 KM",
+              "duration": 180,
+              "included_distance": 75,
+              "price": 35.99
+            },
+            {
+              "name": "4 H + 40 KM",
+              "duration": 240,
+              "included_distance": 40,
+              "price": 32.19
+            },
+            {
+              "name": "9 H + 100 KM",
+              "duration": 540,
+              "included_distance": 100,
+              "price": 45.19
+            },
+            {
+              "name": "9 H + 250 KM",
+              "duration": 540,
+              "included_distance": 250,
+              "price": 84.79
+            },
+            {
+              "name": "12 H + 60 KM",
+              "duration": 720,
+              "included_distance": 60,
+              "price": 35.59
+            },
+            {
+              "name": "12 H + 150 KM",
+              "duration": 720,
+              "included_distance": 150,
+              "price": 58.39
+            },
+            {
+              "name": "1 D + 25 KM",
+              "duration": 1440,
+              "included_distance": 25,
+              "price": 25.9
+            },
+            {
+              "name": "1 D + 50 KM",
+              "duration": 1440,
+              "included_distance": 50,
+              "price": 32.4
+            },
+            {
+              "name": "1 D + 100 KM",
+              "duration": 1440,
+              "included_distance": 100,
+              "price": 45.4
+            },
+            {
+              "name": "1 D + 150 KM",
+              "duration": 1440,
+              "included_distance": 150,
+              "price": 58.4
+            },
+            {
+              "name": "1 D + 250 KM",
+              "duration": 1440,
+              "included_distance": 250,
+              "price": 84.9
+            },
+            {
+              "name": "1 D + 350 KM",
+              "duration": 1440,
+              "included_distance": 350,
+              "price": 111.9
+            },
+            {
+              "name": "2 D + 50 KM",
+              "duration": 2880,
+              "included_distance": 50,
+              "price": 50.9
+            },
+            {
+              "name": "2 D + 100 KM",
+              "duration": 2880,
+              "included_distance": 100,
+              "price": 63.9
+            },
+            {
+              "name": "2 D + 250 KM",
+              "duration": 2880,
+              "included_distance": 250,
+              "price": 103.9
+            },
+            {
+              "name": "2 D + 400 KM",
+              "duration": 2880,
+              "included_distance": 400,
+              "price": 143.9
+            },
+            {
+              "name": "3 D + 100 KM",
+              "duration": 4320,
+              "included_distance": 100,
+              "price": 82.4
+            },
+            {
+              "name": "3 D + 175 KM",
+              "duration": 4320,
+              "included_distance": 175,
+              "price": 102.4
+            },
+            {
+              "name": "3 D + 200 KM",
+              "duration": 4320,
+              "included_distance": 200,
+              "price": 108.9
+            },
+            {
+              "name": "3 D + 300 KM",
+              "duration": 4320,
+              "included_distance": 300,
+              "price": 135.4
+            },
+            {
+              "name": "3 D + 500 KM",
+              "duration": 4320,
+              "included_distance": 500,
+              "price": 189.4
+            },
+            {
+              "name": "5 D + 150 KM",
+              "duration": 7200,
+              "included_distance": 150,
+              "price": 147.4
+            },
+            {
+              "name": "5 D + 250 KM",
+              "duration": 7200,
+              "included_distance": 250,
+              "price": 173.9
+            },
+            {
+              "name": "5 D + 450 KM",
+              "duration": 7200,
+              "included_distance": 450,
+              "price": 227.4
+            },
+            {
+              "name": "7 D + 200 KM",
+              "duration": 10080,
+              "included_distance": 200,
+              "price": 182.9
+            },
+            {
+              "name": "7 D + 400 KM",
+              "duration": 10080,
+              "included_distance": 400,
+              "price": 236.4
+            },
+            {
+              "name": "7 D + 600 KM",
+              "duration": 10080,
+              "included_distance": 600,
+              "price": 290.9
+            },
+            {
+              "name": "7 D + 900 KM",
+              "duration": 10080,
+              "included_distance": 900,
+              "price": 373.4
+            },
+            {
+              "name": "14 D + 600 KM",
+              "duration": 20160,
+              "included_distance": 600,
+              "price": 419.4
+            },
+            {
+              "name": "14 D + 1000 KM",
+              "duration": 20160,
+              "included_distance": 1000,
+              "price": 529.9
+            },
+            {
+              "name": "28 D + 1800 KM",
+              "duration": 40320,
+              "included_distance": 1800,
+              "price": 1008.4
+            },
+            {
+              "name": "28 D + 2500 KM",
+              "duration": 40320,
+              "included_distance": 2500,
+              "price": 1210.9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "CarGuru",
+      "cars": [
+        {
+          "car_model": "Toyota Yaris",
+          "start_fee": 0.99,
+          "time_rates": {
+            "minute": 0.07,
+            "day": 22.99
           },
-          {
-            "car_model": "Nissan Juke",
-            "start_fee": 0.99,
-            "minute_rate": 0.09,
-            "hour_rate": null,
-            "day_rate": 23.99,
-            "week_rate": null,
-            "distance_rate": 0.19,
-            "included_distance": 0,
-            "trip_packages": null
+          "distance_rate": 0.17,
+          "included_distance": 0,
+          "trip_packages": null
+        },
+        {
+          "car_model": "Toyota Corolla",
+          "start_fee": 0.99,
+          "time_rates": {
+            "minute": 0.09,
+            "day": 23.99
           },
-          {
-            "car_model": "Toyota C-HR",
-            "start_fee": 0.99,
-            "minute_rate": 0.12,
-            "hour_rate": null,
-            "day_rate": 25.99,
-            "week_rate": null,
-            "distance_rate": 0.23,
-            "included_distance": 0,
-            "trip_packages": null
+          "distance_rate": 0.19,
+          "included_distance": 0,
+          "trip_packages": null
+        },
+        {
+          "car_model": "Nissan Juke",
+          "start_fee": 0.99,
+          "time_rates": {
+            "minute": 0.09,
+            "day": 23.99
           },
-          {
-            "car_model": "Nissan Qashqai",
-            "start_fee": 0.99,
-            "minute_rate": 0.13,
-            "hour_rate": null,
-            "day_rate": 35.99,
-            "week_rate": null,
-            "distance_rate": 0.24,
-            "included_distance": 0,
-            "trip_packages": null
+          "distance_rate": 0.19,
+          "included_distance": 0,
+          "trip_packages": null
+        },
+        {
+          "car_model": "Toyota C-HR",
+          "start_fee": 0.99,
+          "time_rates": {
+            "minute": 0.12,
+            "day": 25.99
           },
-          {
-            "car_model": "Toyota RAV 4",
-            "start_fee": 0.99,
-            "minute_rate": 0.13,
-            "hour_rate": null,
-            "day_rate": 35.99,
-            "week_rate": null,
-            "distance_rate": 0.24,
-            "included_distance": 0,
-            "trip_packages": null
+          "distance_rate": 0.23,
+          "included_distance": 0,
+          "trip_packages": null
+        },
+        {
+          "car_model": "Nissan Qashqai",
+          "start_fee": 0.99,
+          "time_rates": {
+            "minute": 0.13,
+            "day": 35.99
           },
-          {
-            "car_model": "VW e-Up!",
-            "start_fee": 0.99,
-            "minute_rate": 0.05,
-            "hour_rate": null,
-            "day_rate": 34.99,
-            "week_rate": null,
-            "distance_rate": 0.1,
-            "included_distance": 0,
-            "trip_packages": null
+          "distance_rate": 0.24,
+          "included_distance": 0,
+          "trip_packages": null
+        },
+        {
+          "car_model": "Toyota RAV 4",
+          "start_fee": 0.99,
+          "time_rates": {
+            "minute": 0.13,
+            "day": 35.99
           },
-          {
-            "car_model": "Tesla Model 3 Standard Range",
-            "start_fee": 0.99,
-            "minute_rate": 0.15,
-            "hour_rate": null,
-            "day_rate": 39.99,
-            "week_rate": 251.94,
-            "distance_rate": 0.25,
-            "included_distance": 0,
-            "trip_packages": null
+          "distance_rate": 0.24,
+          "included_distance": 0,
+          "trip_packages": null
+        },
+        {
+          "car_model": "VW e-Up!",
+          "start_fee": 0.99,
+          "time_rates": {
+            "minute": 0.05,
+            "day": 34.99
           },
-          {
-            "car_model": "Tesla Model 3 Long Range",
-            "start_fee": 0.99,
-            "minute_rate": 0.15,
-            "hour_rate": null,
-            "day_rate": 39.99,
-            "week_rate": 251.94,
-            "distance_rate": 0.25,
-            "included_distance": 0,
-            "trip_packages": null
+          "distance_rate": 0.1,
+          "included_distance": 0,
+          "trip_packages": null
+        },
+        {
+          "car_model": "Tesla Model 3 Standard Range",
+          "start_fee": 0.99,
+          "time_rates": {
+            "minute": 0.15,
+            "day": 39.99,
+            "week": 251.94
           },
-          {
-            "car_model": "Tesla Model 3 Performance",
-            "start_fee": 0.99,
-            "minute_rate": 0.19,
-            "hour_rate": null,
-            "day_rate": 59.99,
-            "week_rate": null,
-            "distance_rate": 0.25,
-            "included_distance": 0,
-            "trip_packages": null
+          "distance_rate": 0.25,
+          "included_distance": 0,
+          "trip_packages": null
+        },
+        {
+          "car_model": "Tesla Model 3 Long Range",
+          "start_fee": 0.99,
+          "time_rates": {
+            "minute": 0.15,
+            "day": 39.99,
+            "week": 251.94
           },
-          {
-            "car_model": "Tesla Model Y Standard Range",
-            "start_fee": 0.99,
-            "minute_rate": 0.19,
-            "hour_rate": null,
-            "day_rate": 59.99,
-            "week_rate": 377.94,
-            "distance_rate": 0.25,
-            "included_distance": 0,
-            "trip_packages": null
-          }
-        ]
-      },
-      {
-        "name": "Bolt",
-        "cars": [
-          {
-            "car_model": "Toyota Yaris",
-            "start_fee": 0,
-            "minute_rate": 0.11,
-            "hour_rate": 4.19,
-            "day_rate": 15.89,
-            "week_rate": null,
-            "distance_rate": 0.25,
-            "included_distance": 0,
-            "trip_packages": null
+          "distance_rate": 0.25,
+          "included_distance": 0,
+          "trip_packages": null
+        },
+        {
+          "car_model": "Tesla Model 3 Performance",
+          "start_fee": 0.99,
+          "time_rates": {
+            "minute": 0.19,
+            "day": 59.99
           },
-          {
-            "car_model": "Skoda Fabia",
-            "start_fee": 0,
-            "minute_rate": 0.12,
-            "hour_rate": 4.19,
-            "day_rate": 15.89,
-            "week_rate": null,
-            "distance_rate": 0.25,
-            "included_distance": 0,
-            "trip_packages": null
+          "distance_rate": 0.25,
+          "included_distance": 0,
+          "trip_packages": null
+        },
+        {
+          "car_model": "Tesla Model Y Standard Range",
+          "start_fee": 0.99,
+          "time_rates": {
+            "minute": 0.19,
+            "day": 59.99,
+            "week": 377.94
           },
-          {
-            "car_model": "Audi A1",
-            "start_fee": 0,
-            "minute_rate": 0.12,
-            "hour_rate": 4.19,
-            "day_rate": 15.89,
-            "week_rate": null,
-            "distance_rate": 0.25,
-            "included_distance": 0,
-            "trip_packages": null
+          "distance_rate": 0.25,
+          "included_distance": 0,
+          "trip_packages": null
+        }
+      ]
+    },
+    {
+      "name": "Bolt",
+      "cars": [
+        {
+          "car_model": "Toyota Yaris",
+          "start_fee": 0,
+          "time_rates": {
+            "minute": 0.11,
+            "hour": 4.19,
+            "day": 15.89
           },
-          {
-            "car_model": "Hyundai Bayon",
-            "start_fee": 0,
-            "minute_rate": 0.14,
-            "hour_rate": 4.99,
-            "day_rate": 18.90,
-            "week_rate": null,
-            "distance_rate": 0.26,
-            "included_distance": 0,
-            "trip_packages": null
+          "distance_rate": 0.25,
+          "included_distance": 0,
+          "trip_packages": null
+        },
+        {
+          "car_model": "Skoda Fabia",
+          "start_fee": 0,
+          "time_rates": {
+            "minute": 0.12,
+            "hour": 4.19,
+            "day": 15.89
           },
-          {
-            "car_model": "Toyota Corolla",
-            "start_fee": 0,
-            "minute_rate": 0.13,
-            "hour_rate": 5.20,
-            "day_rate": 17.56,
-            "week_rate": null,
-            "distance_rate": 0.26,
-            "included_distance": 0,
-            "trip_packages": null
+          "distance_rate": 0.25,
+          "included_distance": 0,
+          "trip_packages": null
+        },
+        {
+          "car_model": "Audi A1",
+          "start_fee": 0,
+          "time_rates": {
+            "minute": 0.12,
+            "hour": 4.19,
+            "day": 15.89
           },
-          {
-            "car_model": "Peugeot 208",
-            "start_fee": 0,
-            "minute_rate": 0.13,
-            "hour_rate": 5.20,
-            "day_rate": 17.56,
-            "week_rate": null,
-            "distance_rate": 0.26,
-            "included_distance": 0,
-            "trip_packages": null
+          "distance_rate": 0.25,
+          "included_distance": 0,
+          "trip_packages": null
+        },
+        {
+          "car_model": "Hyundai Bayon",
+          "start_fee": 0,
+          "time_rates": {
+            "minute": 0.14,
+            "hour": 4.99,
+            "day": 18.9
           },
-          {
-            "car_model": "Audi A3",
-            "start_fee": 0,
-            "minute_rate": 0.13,
-            "hour_rate": 5.20,
-            "day_rate": 17.56,
-            "week_rate": null,
-            "distance_rate": 0.26,
-            "included_distance": 0,
-            "trip_packages": null
+          "distance_rate": 0.26,
+          "included_distance": 0,
+          "trip_packages": null
+        },
+        {
+          "car_model": "Toyota Corolla",
+          "start_fee": 0,
+          "time_rates": {
+            "minute": 0.13,
+            "hour": 5.2,
+            "day": 17.56
           },
-          {
-            "car_model": "Peugeot 2008",
-            "start_fee": 0,
-            "minute_rate": 0.14,
-            "hour_rate": 5.45,
-            "day_rate": 19.24,
-            "week_rate": null,
-            "distance_rate": 0.27,
-            "included_distance": 0,
-            "trip_packages": null
+          "distance_rate": 0.26,
+          "included_distance": 0,
+          "trip_packages": null
+        },
+        {
+          "car_model": "Peugeot 208",
+          "start_fee": 0,
+          "time_rates": {
+            "minute": 0.13,
+            "hour": 5.2,
+            "day": 17.56
           },
-          {
-            "car_model": "Audi Q2",
-            "start_fee": 0,
-            "minute_rate": 0.14,
-            "hour_rate": 5.45,
-            "day_rate": 19.24,
-            "week_rate": null,
-            "distance_rate": 0.27,
-            "included_distance": 0,
-            "trip_packages": null
+          "distance_rate": 0.26,
+          "included_distance": 0,
+          "trip_packages": null
+        },
+        {
+          "car_model": "Audi A3",
+          "start_fee": 0,
+          "time_rates": {
+            "minute": 0.13,
+            "hour": 5.2,
+            "day": 17.56
           },
-          {
-            "car_model": "Toyota Yaris Cross",
-            "start_fee": 0,
-            "minute_rate": 0.17,
-            "hour_rate": 6.99,
-            "day_rate": 22.90,
-            "week_rate": null,
-            "distance_rate": 0.27,
-            "included_distance": 0,
-            "trip_packages": null
+          "distance_rate": 0.26,
+          "included_distance": 0,
+          "trip_packages": null
+        },
+        {
+          "car_model": "Peugeot 2008",
+          "start_fee": 0,
+          "time_rates": {
+            "minute": 0.14,
+            "hour": 5.45,
+            "day": 19.24
           },
-          {
-            "car_model": "Toyota C-HR",
-            "start_fee": 0,
-            "minute_rate": 0.14,
-            "hour_rate": 5.45,
-            "day_rate": 19.24,
-            "week_rate": null,
-            "distance_rate": 0.26,
-            "included_distance": 0,
-            "trip_packages": null
+          "distance_rate": 0.27,
+          "included_distance": 0,
+          "trip_packages": null
+        },
+        {
+          "car_model": "Audi Q2",
+          "start_fee": 0,
+          "time_rates": {
+            "minute": 0.14,
+            "hour": 5.45,
+            "day": 19.24
           },
-          {
-            "car_model": "Opel Crossland",
-            "start_fee": 0,
-            "minute_rate": 0.12,
-            "hour_rate": 5.20,
-            "day_rate": 19.24,
-            "week_rate": null,
-            "distance_rate": 0.27,
-            "included_distance": 0,
-            "trip_packages": null
+          "distance_rate": 0.27,
+          "included_distance": 0,
+          "trip_packages": null
+        },
+        {
+          "car_model": "Toyota Yaris Cross",
+          "start_fee": 0,
+          "time_rates": {
+            "minute": 0.17,
+            "hour": 6.99,
+            "day": 22.9
           },
-          {
-            "car_model": "Audi A5",
-            "start_fee": 0,
-            "minute_rate": 0.20,
-            "hour_rate": 11.68,
-            "day_rate": 40.24,
-            "week_rate": null,
-            "distance_rate": 0.28,
-            "included_distance": 0,
-            "trip_packages": null
+          "distance_rate": 0.27,
+          "included_distance": 0,
+          "trip_packages": null
+        },
+        {
+          "car_model": "Toyota C-HR",
+          "start_fee": 0,
+          "time_rates": {
+            "minute": 0.14,
+            "hour": 5.45,
+            "day": 19.24
           },
-          {
-            "car_model": "Audi A4",
-            "start_fee": 0,
-            "minute_rate": 0.16,
-            "hour_rate": 9.16,
-            "day_rate": 31.84,
-            "week_rate": null,
-            "distance_rate": 0.28,
-            "included_distance": 0,
-            "trip_packages": null
+          "distance_rate": 0.26,
+          "included_distance": 0,
+          "trip_packages": null
+        },
+        {
+          "car_model": "Opel Crossland",
+          "start_fee": 0,
+          "time_rates": {
+            "minute": 0.12,
+            "hour": 5.2,
+            "day": 19.24
           },
-          {
-            "car_model": "BMW 4 Convertible",
-            "start_fee": 0,
-            "minute_rate": 0.37,
-            "hour_rate": 21.90,
-            "day_rate": 99.90,
-            "week_rate": null,
-            "distance_rate": 0.30,
-            "included_distance": 0,
-            "trip_packages": null
-          }
-        ]
-      },
-      {
-        "name": "OxDrive",
-        "cars": [
-          {
-            "car_model": "Tesla Model 3 Standard Range",
-            "start_fee": 0,
-            "minute_rate": 0.19,
-            "hour_rate": 7.9,
-            "day_rate": 39,
-            "week_rate": 269,
-            "distance_rate": 0.29,
-            "included_distance": 0,
-            "trip_packages": null
+          "distance_rate": 0.27,
+          "included_distance": 0,
+          "trip_packages": null
+        },
+        {
+          "car_model": "Audi A5",
+          "start_fee": 0,
+          "time_rates": {
+            "minute": 0.2,
+            "hour": 11.68,
+            "day": 40.24
           },
-          {
-            "car_model": "Tesla Model 3 Long Range",
-            "start_fee": 0,
-            "minute_rate": 0.19,
-            "hour_rate": 7.9,
-            "day_rate": 49,
-            "week_rate": 339,
-            "distance_rate": 0.29,
-            "included_distance": 0,
-            "trip_packages": null
+          "distance_rate": 0.28,
+          "included_distance": 0,
+          "trip_packages": null
+        },
+        {
+          "car_model": "Audi A4",
+          "start_fee": 0,
+          "time_rates": {
+            "minute": 0.16,
+            "hour": 9.16,
+            "day": 31.84
           },
-          {
-            "car_model": "Tesla Model 3 Performance",
-            "start_fee": 0,
-            "minute_rate": 0.24,
-            "hour_rate": 8.9,
-            "day_rate": 59,
-            "week_rate": 369,
-            "distance_rate": 0.29,
-            "included_distance": 0,
-            "trip_packages": null
+          "distance_rate": 0.28,
+          "included_distance": 0,
+          "trip_packages": null
+        },
+        {
+          "car_model": "BMW 4 Convertible",
+          "start_fee": 0,
+          "time_rates": {
+            "minute": 0.37,
+            "hour": 21.9,
+            "day": 99.9
           },
-          {
-            "car_model": "Tesla Model Y Standard Range",
-            "start_fee": 0,
-            "minute_rate": 0.24,
-            "hour_rate": 8.9,
-            "day_rate": 59,
-            "week_rate": 369,
-            "distance_rate": 0.29,
-            "included_distance": 0,
-            "trip_packages": null
+          "distance_rate": 0.3,
+          "included_distance": 0,
+          "trip_packages": null
+        }
+      ]
+    },
+    {
+      "name": "OxDrive",
+      "cars": [
+        {
+          "car_model": "Tesla Model 3 Standard Range",
+          "start_fee": 0,
+          "time_rates": {
+            "minute": 0.19,
+            "hour": 7.9,
+            "day": 39,
+            "week": 269
           },
-          {
-            "car_model": "Tesla Model Y Long Range",
-            "start_fee": 0,
-            "minute_rate": 0.27,
-            "hour_rate": 9.9,
-            "day_rate": 69,
-            "week_rate": 399,
-            "distance_rate": 0.29,
-            "included_distance": 0,
-            "trip_packages": null
+          "distance_rate": 0.29,
+          "included_distance": 0,
+          "trip_packages": null
+        },
+        {
+          "car_model": "Tesla Model 3 Long Range",
+          "start_fee": 0,
+          "time_rates": {
+            "minute": 0.19,
+            "hour": 7.9,
+            "day": 49,
+            "week": 339
           },
-          {
-            "car_model": "Audi Q4 e-tron",
-            "start_fee": 0,
-            "minute_rate": 0.32,
-            "hour_rate": 11.9,
-            "day_rate": 89,
-            "week_rate": 499,
-            "distance_rate": 0.29,
-            "included_distance": 0,
-            "trip_packages": null
+          "distance_rate": 0.29,
+          "included_distance": 0,
+          "trip_packages": null
+        },
+        {
+          "car_model": "Tesla Model 3 Performance",
+          "start_fee": 0,
+          "time_rates": {
+            "minute": 0.24,
+            "hour": 8.9,
+            "day": 59,
+            "week": 369
           },
-          {
-            "car_model": "Audi e-tron 55 Sprotback",
-            "start_fee": 0,
-            "minute_rate": 0.34,
-            "hour_rate": 14.9,
-            "day_rate": 109,
-            "week_rate": 599,
-            "distance_rate": 0.29,
-            "included_distance": 0,
-            "trip_packages": null
-          }
-        ]
-      },
-      {
-        "name": "Avis Now",
-        "cars": [
-          {
-            "car_model": "Cupra Born",
-            "start_fee": 0,
-            "minute_rate": 0.12,
-            "hour_rate": 4.99,
-            "day_rate": 24.5,
-            "week_rate": null,
-            "distance_rate": 0.22,
-            "included_distance": 0,
-            "trip_packages": null
-          }
-        ]
-      }
-    ]
-  }
+          "distance_rate": 0.29,
+          "included_distance": 0,
+          "trip_packages": null
+        },
+        {
+          "car_model": "Tesla Model Y Standard Range",
+          "start_fee": 0,
+          "time_rates": {
+            "minute": 0.24,
+            "hour": 8.9,
+            "day": 59,
+            "week": 369
+          },
+          "distance_rate": 0.29,
+          "included_distance": 0,
+          "trip_packages": null
+        },
+        {
+          "car_model": "Tesla Model Y Long Range",
+          "start_fee": 0,
+          "time_rates": {
+            "minute": 0.27,
+            "hour": 9.9,
+            "day": 69,
+            "week": 399
+          },
+          "distance_rate": 0.29,
+          "included_distance": 0,
+          "trip_packages": null
+        },
+        {
+          "car_model": "Audi Q4 e-tron",
+          "start_fee": 0,
+          "time_rates": {
+            "minute": 0.32,
+            "hour": 11.9,
+            "day": 89,
+            "week": 499
+          },
+          "distance_rate": 0.29,
+          "included_distance": 0,
+          "trip_packages": null
+        },
+        {
+          "car_model": "Audi e-tron 55 Sprotback",
+          "start_fee": 0,
+          "time_rates": {
+            "minute": 0.34,
+            "hour": 14.9,
+            "day": 109,
+            "week": 599
+          },
+          "distance_rate": 0.29,
+          "included_distance": 0,
+          "trip_packages": null
+        }
+      ]
+    },
+    {
+      "name": "Avis Now",
+      "cars": [
+        {
+          "car_model": "Cupra Born",
+          "start_fee": 0,
+          "time_rates": {
+            "minute": 0.12,
+            "hour": 4.99,
+            "day": 24.5
+          },
+          "distance_rate": 0.22,
+          "included_distance": 0,
+          "trip_packages": null
+        }
+      ]
+    },
+    {
+      "name": "Sixt/Avis/Hertz/Europcar",
+      "cars": [
+        {
+          "car_model": "Compact car",
+          "start_fee": 0,
+          "time_rates": {
+            "day": 45
+          },
+          "distance_rate": 0.09,
+          "included_distance": 0,
+          "trip_packages": null
+        }
+      ]
+    }
+  ]
+}
