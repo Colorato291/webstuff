@@ -290,7 +290,8 @@
               "included_distance": 2500,
               "price": 1210.9
             }
-          ]
+          ],
+          "tags": []
         }
       ]
     },
@@ -306,7 +307,10 @@
           },
           "distance_rate": 0.17,
           "included_distance": 0,
-          "trip_packages": null
+          "trip_packages": null,
+          "tags": [
+            "LIM"
+          ]
         },
         {
           "car_model": "Toyota Corolla",
@@ -317,7 +321,10 @@
           },
           "distance_rate": 0.19,
           "included_distance": 0,
-          "trip_packages": null
+          "trip_packages": null,
+          "tags": [
+            "LIM"
+          ]
         },
         {
           "car_model": "Nissan Juke",
@@ -328,7 +335,10 @@
           },
           "distance_rate": 0.19,
           "included_distance": 0,
-          "trip_packages": null
+          "trip_packages": null,
+          "tags": [
+            "LIM"
+          ]
         },
         {
           "car_model": "Toyota C-HR",
@@ -339,7 +349,10 @@
           },
           "distance_rate": 0.23,
           "included_distance": 0,
-          "trip_packages": null
+          "trip_packages": null,
+          "tags": [
+            "LIM"
+          ]
         },
         {
           "car_model": "Nissan Qashqai",
@@ -350,7 +363,10 @@
           },
           "distance_rate": 0.24,
           "included_distance": 0,
-          "trip_packages": null
+          "trip_packages": null,
+          "tags": [
+            "LIM"
+          ]
         },
         {
           "car_model": "Toyota RAV 4",
@@ -361,7 +377,10 @@
           },
           "distance_rate": 0.24,
           "included_distance": 0,
-          "trip_packages": null
+          "trip_packages": null,
+          "tags": [
+            "LIM"
+          ]
         },
         {
           "car_model": "VW e-Up!",
@@ -372,7 +391,11 @@
           },
           "distance_rate": 0.1,
           "included_distance": 0,
-          "trip_packages": null
+          "trip_packages": null,
+          "tags": [
+            "LIM",
+            "EV"
+          ]
         },
         {
           "car_model": "Tesla Model 3 Standard Range",
@@ -384,7 +407,11 @@
           },
           "distance_rate": 0.25,
           "included_distance": 0,
-          "trip_packages": null
+          "trip_packages": null,
+          "tags": [
+            "LIM",
+            "EV"
+          ]
         },
         {
           "car_model": "Tesla Model 3 Long Range",
@@ -396,7 +423,11 @@
           },
           "distance_rate": 0.25,
           "included_distance": 0,
-          "trip_packages": null
+          "trip_packages": null,
+          "tags": [
+            "LIM",
+            "EV"
+          ]
         },
         {
           "car_model": "Tesla Model 3 Performance",
@@ -407,7 +438,11 @@
           },
           "distance_rate": 0.25,
           "included_distance": 0,
-          "trip_packages": null
+          "trip_packages": null,
+          "tags": [
+            "LIM",
+            "EV"
+          ]
         },
         {
           "car_model": "Tesla Model Y Standard Range",
@@ -419,7 +454,11 @@
           },
           "distance_rate": 0.25,
           "included_distance": 0,
-          "trip_packages": null
+          "trip_packages": null,
+          "tags": [
+            "LIM",
+            "EV"
+          ]
         }
       ]
     },
@@ -436,7 +475,8 @@
           },
           "distance_rate": 0.25,
           "included_distance": 0,
-          "trip_packages": null
+          "trip_packages": null,
+          "tags": []
         },
         {
           "car_model": "Skoda Fabia",
@@ -448,7 +488,8 @@
           },
           "distance_rate": 0.25,
           "included_distance": 0,
-          "trip_packages": null
+          "trip_packages": null,
+          "tags": []
         },
         {
           "car_model": "Audi A1",
@@ -460,7 +501,8 @@
           },
           "distance_rate": 0.25,
           "included_distance": 0,
-          "trip_packages": null
+          "trip_packages": null,
+          "tags": []
         },
         {
           "car_model": "Hyundai Bayon",
@@ -472,7 +514,8 @@
           },
           "distance_rate": 0.26,
           "included_distance": 0,
-          "trip_packages": null
+          "trip_packages": null,
+          "tags": []
         },
         {
           "car_model": "Toyota Corolla",
@@ -484,7 +527,8 @@
           },
           "distance_rate": 0.26,
           "included_distance": 0,
-          "trip_packages": null
+          "trip_packages": null,
+          "tags": []
         },
         {
           "car_model": "Peugeot 208",
@@ -496,7 +540,8 @@
           },
           "distance_rate": 0.26,
           "included_distance": 0,
-          "trip_packages": null
+          "trip_packages": null,
+          "tags": []
         },
         {
           "car_model": "Audi A3",
@@ -508,7 +553,8 @@
           },
           "distance_rate": 0.26,
           "included_distance": 0,
-          "trip_packages": null
+          "trip_packages": null,
+          "tags": []
         },
         {
           "car_model": "Peugeot 2008",
@@ -520,7 +566,8 @@
           },
           "distance_rate": 0.27,
           "included_distance": 0,
-          "trip_packages": null
+          "trip_packages": null,
+          "tags": []
         },
         {
           "car_model": "Audi Q2",
@@ -532,7 +579,8 @@
           },
           "distance_rate": 0.27,
           "included_distance": 0,
-          "trip_packages": null
+          "trip_packages": null,
+          "tags": []
         },
         {
           "car_model": "Toyota Yaris Cross",
@@ -544,7 +592,8 @@
           },
           "distance_rate": 0.27,
           "included_distance": 0,
-          "trip_packages": null
+          "trip_packages": null,
+          "tags": []
         },
         {
           "car_model": "Toyota C-HR",
@@ -556,7 +605,8 @@
           },
           "distance_rate": 0.26,
           "included_distance": 0,
-          "trip_packages": null
+          "trip_packages": null,
+          "tags": []
         },
         {
           "car_model": "Opel Crossland",
@@ -568,7 +618,8 @@
           },
           "distance_rate": 0.27,
           "included_distance": 0,
-          "trip_packages": null
+          "trip_packages": null,
+          "tags": []
         },
         {
           "car_model": "Audi A5",
@@ -580,7 +631,8 @@
           },
           "distance_rate": 0.28,
           "included_distance": 0,
-          "trip_packages": null
+          "trip_packages": null,
+          "tags": []
         },
         {
           "car_model": "Audi A4",
@@ -592,7 +644,8 @@
           },
           "distance_rate": 0.28,
           "included_distance": 0,
-          "trip_packages": null
+          "trip_packages": null,
+          "tags": []
         },
         {
           "car_model": "BMW 4 Convertible",
@@ -604,7 +657,8 @@
           },
           "distance_rate": 0.3,
           "included_distance": 0,
-          "trip_packages": null
+          "trip_packages": null,
+          "tags": []
         }
       ]
     },
@@ -622,7 +676,10 @@
           },
           "distance_rate": 0.29,
           "included_distance": 0,
-          "trip_packages": null
+          "trip_packages": null,
+          "tags": [
+            "EV"
+          ]
         },
         {
           "car_model": "Tesla Model 3 Long Range",
@@ -635,7 +692,10 @@
           },
           "distance_rate": 0.29,
           "included_distance": 0,
-          "trip_packages": null
+          "trip_packages": null,
+          "tags": [
+            "EV"
+          ]
         },
         {
           "car_model": "Tesla Model 3 Performance",
@@ -648,7 +708,10 @@
           },
           "distance_rate": 0.29,
           "included_distance": 0,
-          "trip_packages": null
+          "trip_packages": null,
+          "tags": [
+            "EV"
+          ]
         },
         {
           "car_model": "Tesla Model Y Standard Range",
@@ -661,7 +724,10 @@
           },
           "distance_rate": 0.29,
           "included_distance": 0,
-          "trip_packages": null
+          "trip_packages": null,
+          "tags": [
+            "EV"
+          ]
         },
         {
           "car_model": "Tesla Model Y Long Range",
@@ -674,7 +740,10 @@
           },
           "distance_rate": 0.29,
           "included_distance": 0,
-          "trip_packages": null
+          "trip_packages": null,
+          "tags": [
+            "EV"
+          ]
         },
         {
           "car_model": "Audi Q4 e-tron",
@@ -687,7 +756,10 @@
           },
           "distance_rate": 0.29,
           "included_distance": 0,
-          "trip_packages": null
+          "trip_packages": null,
+          "tags": [
+            "EV"
+          ]
         },
         {
           "car_model": "Audi e-tron 55 Sprotback",
@@ -700,7 +772,10 @@
           },
           "distance_rate": 0.29,
           "included_distance": 0,
-          "trip_packages": null
+          "trip_packages": null,
+          "tags": [
+            "EV"
+          ]
         }
       ]
     },
@@ -717,7 +792,10 @@
           },
           "distance_rate": 0.22,
           "included_distance": 0,
-          "trip_packages": null
+          "trip_packages": null,
+          "tags": [
+            "EV"
+          ]
         }
       ]
     },
@@ -732,7 +810,8 @@
           },
           "distance_rate": 0.09,
           "included_distance": 0,
-          "trip_packages": null
+          "trip_packages": null,
+          "tags": []
         }
       ]
     }

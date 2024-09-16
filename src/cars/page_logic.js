@@ -118,40 +118,6 @@ async function fetchData() {
     }
 }
 
-function convertTime(hours) {
-    const minutes = Math.floor((hours % 1) * 60);
-    const remainingHours = Math.floor(hours % 24);
-    const days = Math.floor((hours / 24) % 7);
-    const weeks = Math.floor(hours / (24 * 7));
-
-    return {
-        minutes,
-        hours: remainingHours,
-        days,
-        weeks
-    };
-}
-
-function generateForm(rentConditions){
-    const { minutes = 0, hours = 0, days = 0, weeks = 0, kilometers = 0 } = rentConditions;
-    let timeComponents = [];
-
-    if (weeks > 0) timeComponents.push(`${weeks} w`);
-    if (days > 0) timeComponents.push(`${days} d`);
-    if (hours > 0) timeComponents.push(`${hours} h`);
-    if (minutes > 0) timeComponents.push(`${minutes} min`);
-
-    let timeString = timeComponents.join(' ');
-
-    if (timeComponents.length > 0) {
-        timeString += ` + ${kilometers} km`;
-    } else if (kilometers !== 0) {
-        timeString = `${kilometers} km`; // If no time components, just show kilometers
-    }
-
-    return timeString;
-}
-
 function calculateDurationPrice(inputData, car, companyName) {
     if (companyName === "Avis Now" && inputData % 15 !== 0) {
         inputData += (15 - inputData % 15);
@@ -174,55 +140,86 @@ function calculateDurationPrice(inputData, car, companyName) {
     });
 
     rates.sort((a, b) => b.duration - a.duration);
-
     const shortestRate = rates[rates.length - 1];
-
-    const dp = new Array(inputData + 1).fill(Infinity);
-    const choices = new Array(inputData + 1).fill(null);
-    dp[0] = 0;
-
-    for (let i = 1; i <= inputData; i++) {
+    if (car.tags.includes('LIM')) {
+        let optimal_duration = [];
+        let optimal_price = Infinity;
         for (const rate of rates) {
-            if (rate.duration <= i) {
-                const newPrice = dp[i - rate.duration] + rate.price;
-                if (newPrice < dp[i]) {
-                    dp[i] = newPrice;
-                    choices[i] = rate;
+            let duration = [];
+            let price = null;
+            if (rate != shortestRate){
+                const remainder = Math.max(0,inputData-rate.duration);
+                price = rate.price + Math.ceil(remainder / shortestRate.duration)* shortestRate.price;
+                duration = [{type: rate.type, quantity: 1}];
+                if (remainder != 0) {
+                    duration.push({type: shortestRate.type, quantity: Math.ceil(remainder / shortestRate.duration)})
                 }
             }
+            else {
+                price = Math.ceil(inputData / shortestRate.duration) * shortestRate.price;
+                duration = [{type: rate.type, quantity: Math.ceil(inputData / shortestRate.duration)}];
+            }
+            if (price < optimal_price) {
+                optimal_price = price;
+                optimal_duration = duration;
+            }
         }
-        
-        if (choices[i] === null) {
-            choices[i] = shortestRate;
-            dp[i] = Math.ceil(i / shortestRate.duration) * shortestRate.price;
-        }
+        const formatted_duration = optimal_duration.map(d => 
+            `${d.quantity} ${formatDurationType(d.type)}`
+        ).join(' + ');
+
+        return {
+            time_price: optimal_price,
+            optimal_duration: formatted_duration
+        };
     }
+    else {
+        const dp = new Array(inputData + 1).fill(Infinity);
+        const choices = new Array(inputData + 1).fill(null);
+        dp[0] = 0;
 
-    let remaining = inputData;
-    const optimal_duration = [];
-    while (remaining > 0) {
-        const rate = choices[remaining];
-        if (!rate) {
-            console.error(`No rate found for remaining duration: ${remaining}`);
-            break;
+        for (let i = 1; i <= inputData; i++) {
+            for (const rate of rates) {
+                if (rate.duration <= i) {
+                    const newPrice = dp[i - rate.duration] + rate.price;
+                    if (newPrice < dp[i]) {
+                        dp[i] = newPrice;
+                        choices[i] = rate;
+                    }
+                }
+            }
+            
+            if (choices[i] === null) {
+                choices[i] = shortestRate;
+                dp[i] = Math.ceil(i / shortestRate.duration) * shortestRate.price;
+            }
         }
-        const existingEntry = optimal_duration.find(d => d.type === rate.type);
-        if (existingEntry) {
-            existingEntry.quantity++;
-        } else {
-            optimal_duration.push({type: rate.type, quantity: 1});
+
+        let remaining = inputData;
+        const optimal_duration = [];
+        while (remaining > 0) {
+            const rate = choices[remaining];
+            if (!rate) {
+                console.error(`No rate found for remaining duration: ${remaining}`);
+                break;
+            }
+            const existingEntry = optimal_duration.find(d => d.type === rate.type);
+            if (existingEntry) {
+                existingEntry.quantity++;
+            } else {
+                optimal_duration.push({type: rate.type, quantity: 1});
+            }
+            remaining -= rate.duration;
         }
-        remaining -= rate.duration;
+        const formatted_duration = optimal_duration.map(d => 
+            `${d.quantity} ${formatDurationType(d.type)}`
+        ).join(' + ');
+
+        return {
+            time_price: parseFloat(dp[inputData].toFixed(2)),
+            optimal_duration: formatted_duration
+        };
     }
-
-    const formatted_duration = optimal_duration.map(d => 
-        `${d.quantity} ${formatDurationType(d.type)}`
-    ).join(' + ');
-
-    return {
-        time_price: parseFloat(dp[inputData].toFixed(2)),
-        optimal_duration: formatted_duration
-    };
 }
 
 function formatDurationType(type) {
@@ -231,7 +228,7 @@ function formatDurationType(type) {
     const units = formattedType.split(' ');
     if (units.length > 1) {
         prefix = units[0];
-    }
+}
 
     if (formattedType.includes('minute')) formattedType = 'min';
     else if (formattedType.includes('hour')) formattedType = 'h';
@@ -283,7 +280,6 @@ async function priceCalculations(inputData){
         console.error("Data error");
         return;
     }
-
     let result_data_payload = [];
     price_database["companies"].forEach(company =>{ // iterate over companies
         company.cars.forEach(car => {
@@ -297,8 +293,9 @@ async function priceCalculations(inputData){
             const total_price = parseFloat(distance_price + time_price + car.start_fee).toFixed(2);
             
             if (included_distance < kilometers) optimal_duration += ` + ${kilometers} km`;
+            const car_model = car.tags.includes('EV') ? car.car_model + ' ⚡︎' : car.car_model ;
             result_data_payload.push(
-                [company.name, car.car_model, optimal_duration, total_price]
+                [company.name, car_model, optimal_duration, total_price]
             );
             if(car.trip_packages !== null) {
                 const bestPackage = getBestPackage(car, input_in_mins, kilometers, company.name);
