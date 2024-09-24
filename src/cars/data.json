@@ -828,6 +828,30 @@
           "tags": [
             "EV"
           ]
+        },
+        {
+          "car_model": "Seat Leon STW",
+          "start_fee": 0,
+          "time_rates": {
+            "day": 30
+          },
+          "distance_rate": 0.09,
+          "included_distance": 0,
+          "trip_packages": null,
+          "tags": [
+          ]
+        },
+        {
+          "car_model": "Renault Arkana",
+          "start_fee": 0,
+          "time_rates": {
+            "day": 30
+          },
+          "distance_rate": 0.09,
+          "included_distance": 0,
+          "trip_packages": null,
+          "tags": [
+          ]
         }
       ]
     },
