@@ -66,8 +66,82 @@ body, html {
     opacity: 0;
     user-select: none;
     font-weight: 300;
-    font-size: 14px;
-    align-self: center;
+    font-size: 24px;
     text-align: center;
-    margin-top: 20%;
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#project-sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+.project-item {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 150px;
+    overflow: hidden;
+    border: 1px solid white;
+    transition: background-size 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-item .title,
+.project-item .description {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: opacity 0.3s ease;
+}
+
+.project-item .title {
+    font-size: 20px;
+    opacity: 1;
+}
+
+.project-item .description {
+    font-size: 16px;
+    opacity: 0;
+}
+
+.project-item:hover {
+    background-size: 110%;
+}
+
+.project-item:hover .title {
+    opacity: 0;
+}
+
+.project-item:hover .description {
+    opacity: 1;
+}
+
+.project-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.45);
+    transition: background 0.3s ease;
+}
+
+.project-item:hover::before {
+    background: rgba(0, 0, 0, 0.8);
 }
