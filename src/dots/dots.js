@@ -1,8 +1,8 @@
 const canvas = document.getElementById('thePage');
 const ctx = canvas.getContext('2d');
 
-let radius = 5;
-let spacing = 3;
+let radius = 2;
+let spacing = 1;
 let widthCount = Math.floor(window.innerWidth/(2*radius+spacing));
 let heightCount = Math.floor(window.innerHeight/(2*radius+spacing));
 let grid = new Uint8Array(widthCount * heightCount);
@@ -13,8 +13,8 @@ function resizeCanvas() {
     widthCount = Math.floor(window.innerWidth/(2*radius+spacing));
     heightCount = Math.floor(window.innerHeight/(2*radius+spacing));
     // TODO: RESIZE GRID LOGIC SO NO DOT IS LOST
-    grid = new Uint8Array(widthCount * heightCount);
-    drawDots();
+    clearGrid();
+    writeString(0,0, "DOTS PAGE MADE BY COOLCAT");
 }
 
 window.addEventListener('resize', resizeCanvas);
@@ -67,4 +67,56 @@ async function randomDotDraw() {
     }
 }
 
-randomDotDraw();
+async function fetchAlphabet() {
+    try {
+        const response = await fetch('/dots/letter.json');
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        return data;
+    }
+    catch (error) {
+        console.error('Error fetching data:', error);
+        return null;
+    }
+}
+
+async function writeLetter(x, y, letter) {
+    const alphabet = await fetchAlphabet();
+    alphabet[letter].forEach((row, rowIndex) => {
+        row.forEach((column, columnIndex) => {
+            setDot(x+columnIndex, y+rowIndex, column);            
+        });
+    });
+    //drawDots();
+}
+
+function writeString(startX, startY, string) {
+    const letterWidth = 5;  // Width of each letter
+    const letterHeight = 6; // Height of each letter
+    const letterSpacing = 1; // Gap between letters
+    const lineSpacing = 1; // Gap between lines
+    let x = startX;
+    let y = startY;
+
+    for (let i = 0; i < string.length; i++) {
+        // Check if the next letter will exceed the canvas width
+        if (x + letterWidth > widthCount) {
+            // Move to the next line
+            x = startX;
+            y += letterHeight + lineSpacing;
+        }
+
+        // Write the letter
+        writeLetter(x, y, string[i]);
+
+        // Move to the next letter position
+        x += letterWidth + letterSpacing;
+    }
+}
+
+function clearGrid() {
+    grid = new Uint8Array(widthCount * heightCount);
+    drawDots();
+}
