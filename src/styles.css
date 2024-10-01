@@ -62,6 +62,16 @@ body, html {
     margin: 0;
 }
 
+a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+a:visited, a:active {
+    color: inherit;
+}
+
 #projects {
     opacity: 0;
     user-select: none;
