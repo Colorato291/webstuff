@@ -89,7 +89,7 @@ async function writeLetter(x, y, letter) {
             setDot(x+columnIndex, y+rowIndex, column);            
         });
     });
-    //drawDots();
+    drawDots();
 }
 
 function writeString(startX, startY, string) {
