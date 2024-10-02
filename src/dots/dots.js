@@ -14,7 +14,9 @@ function resizeCanvas() {
     heightCount = Math.floor(window.innerHeight/(2*radius+spacing));
     // TODO: RESIZE GRID LOGIC SO NO DOT IS LOST
     clearGrid();
-    writeString(0,0, "DOTS PAGE MADE BY COOLCAT");
+    writeString(0,0, "Dots page made by CoolCat");
+    writeString(0,20, "More functionality will come later");
+    writeString(0,40, "Font based on ndot-55");
 }
 
 window.addEventListener('resize', resizeCanvas);
@@ -92,15 +94,16 @@ async function writeLetter(x, y, letter) {
     drawDots();
 }
 
-function writeString(startX, startY, string) {
-    const letterWidth = 5;  // Width of each letter
+async function writeString(startX, startY, string) {
+    let letterWidth = 5;  // Width of each letter
     const letterHeight = 6; // Height of each letter
     const letterSpacing = 1; // Gap between letters
     const lineSpacing = 1; // Gap between lines
     let x = startX;
     let y = startY;
-
+    const alphabet = await fetchAlphabet();
     for (let i = 0; i < string.length; i++) {
+        letterWidth=alphabet[string[i]][0].length;
         // Check if the next letter will exceed the canvas width
         if (x + letterWidth > widthCount) {
             // Move to the next line
