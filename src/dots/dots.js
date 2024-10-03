@@ -5,7 +5,7 @@ let radius = 2;
 let spacing = 1;
 let widthCount = Math.floor(window.innerWidth/(2*radius+spacing));
 let heightCount = Math.floor(window.innerHeight/(2*radius+spacing));
-let grid = new Uint8Array(widthCount * heightCount);
+let updatedDots = [];
 
 function resizeCanvas() {
     canvas.width = window.innerWidth;
@@ -13,7 +13,7 @@ function resizeCanvas() {
     widthCount = Math.floor(window.innerWidth/(2*radius+spacing));
     heightCount = Math.floor(window.innerHeight/(2*radius+spacing));
     // TODO: RESIZE GRID LOGIC SO NO DOT IS LOST
-    clearGrid();
+    createEmptyGrid();
     writeString(0,0, "Dots page made by CoolCat");
     writeString(0,20, "More functionality will come later");
     writeString(0,40, "Font based on ndot-55");
@@ -22,51 +22,48 @@ function resizeCanvas() {
 window.addEventListener('resize', resizeCanvas);
 resizeCanvas();
 
-function setDot(x, y, status){
-    grid[x + widthCount * y] = status ? 1 : 0;
+function createEmptyGrid(){
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    for(let row = 0; row<heightCount; row++){
+        for(let col = 0; col<widthCount; col++){
+            ctx.beginPath();
+            ctx.fillStyle = "#222222";
+            ctx.arc(spacing + radius + col * (radius * 2 + spacing),
+                    spacing + radius + row * (radius * 2 + spacing),
+                    radius, 0, 2 * Math.PI);
+            ctx.fill();
+        }
+    }
 }
 
-function drawDots() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    grid.forEach((value, index) => {
-        const x = index % widthCount;
-        const y = Math.floor(index / widthCount);
+function updateDot(num) {
+    updatedDots.push(num);
+}
+
+function isDotOn(x, y) {
+    const pixelData = ctx.getImageData(x, y, 1, 1);
+    const [r, g, b] = pixelData.data;
+    return r === 255 && g === 255 && b === 255;
+}
+
+function updateCanvas() {
+    updatedDots.forEach((dot) => {
+        const x = dot % widthCount;
+        const y = Math.floor(dot / widthCount);
+        const isOn = isDotOn(spacing + radius + x * (radius * 2 + spacing),
+                             spacing + radius + y * (radius * 2 + spacing))
+        ctx.clearRect(x * (radius * 2 + spacing),
+                      y * (radius * 2 + spacing),
+                      2*spacing+2*radius, 2*spacing+2*radius);
+
         ctx.beginPath();
-        ctx.fillStyle = value === 1 ? "#ffffff":"#333333";
+        ctx.fillStyle = isOn === false ? "#ffffff":"#333333";
         ctx.arc(spacing + radius + x * (radius * 2 + spacing),
-                spacing + radius + y * (radius * 2 + spacing),
-                radius, 0, 2 * Math.PI);
+                 spacing + radius + y * (radius * 2 + spacing),
+                 radius, 0, 2 * Math.PI);
         ctx.fill();
     })
-}
-
-const randomIntArrayInRange = (min, max, n = 1) =>
-    Array.from(
-      { length: n },
-      () => Math.floor(Math.random() * (max - min + 1)) + min
-    );
-  
-const getRandomInteger = (min, max) => {
-    min = Math.ceil(min)
-    max = Math.floor(max)
-      
-    return Math.floor(Math.random() * (max - min)) + min
-}
-let enabledPixels = []
-
-async function randomDotDraw() {
-    while(true) {
-        if (enabledPixels.length > 200) {
-            const removedPixel = enabledPixels.shift();
-            grid[removedPixel] = 0;
-        }
-        enabledPixels.push(getRandomInteger(0, widthCount * heightCount));
-        enabledPixels.forEach((value) => {
-            grid[value] = 1;
-        });
-        drawDots();
-        await new Promise(resolve => setTimeout(resolve, 16.67));
-    }
+    updatedDots = [];
 }
 
 async function fetchAlphabet() {
@@ -88,10 +85,12 @@ async function writeLetter(x, y, letter) {
     const alphabet = await fetchAlphabet();
     alphabet[letter].forEach((row, rowIndex) => {
         row.forEach((column, columnIndex) => {
-            setDot(x+columnIndex, y+rowIndex, column);            
+            const isOn = isDotOn(spacing + radius + (x+columnIndex) * (radius * 2 + spacing),
+                                 spacing + radius + (y+rowIndex) * (radius * 2 + spacing))
+            if (column != isOn) updateDot((y + rowIndex) * widthCount + (x + columnIndex));
         });
     });
-    drawDots();
+    updateCanvas();
 }
 
 async function writeString(startX, startY, string) {
@@ -110,16 +109,9 @@ async function writeString(startX, startY, string) {
             x = startX;
             y += letterHeight + lineSpacing;
         }
-
         // Write the letter
         writeLetter(x, y, string[i]);
-
         // Move to the next letter position
         x += letterWidth + letterSpacing;
     }
-}
-
-function clearGrid() {
-    grid = new Uint8Array(widthCount * heightCount);
-    drawDots();
 }
