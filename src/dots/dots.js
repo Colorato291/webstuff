@@ -57,7 +57,7 @@ function updateCanvas() {
                       2*spacing+2*radius, 2*spacing+2*radius);
 
         ctx.beginPath();
-        ctx.fillStyle = isOn === false ? "#ffffff":"#333333";
+        ctx.fillStyle = isOn === false ? "#ffffff":"#222222";
         ctx.arc(spacing + radius + x * (radius * 2 + spacing),
                  spacing + radius + y * (radius * 2 + spacing),
                  radius, 0, 2 * Math.PI);
