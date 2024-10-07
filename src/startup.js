@@ -4,6 +4,7 @@ function startAnimation() {
     const welcome = document.getElementById('welcome');
     const about = document.getElementById('about');
     const projects = document.getElementById('projects');
+    const project_sections = document.getElementById('project-sections')
     // Fade in image
     setTimeout(() => {
         img.style.opacity = '1';
@@ -41,7 +42,7 @@ function startAnimation() {
         projects.style.transition = 'opacity 1s ease-in';
         projects.style.opacity = '1';
         projects.style.userSelect = 'auto';
-
+        project_sections.style.pointerEvents = 'auto';
         welcome.style.removeProperty('transition');
     }, 5500)
 }
