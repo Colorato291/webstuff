@@ -301,21 +301,7 @@
           ]
         },
         {
-          "car_model": "Toyota Corolla",
-          "start_fee": 0.99,
-          "time_rates": {
-            "minute": 0.09,
-            "day": 23.99
-          },
-          "distance_rate": 0.19,
-          "included_distance": 0,
-          "trip_packages": null,
-          "tags": [
-            "LIM"
-          ]
-        },
-        {
-          "car_model": "Nissan Juke",
+          "car_model": "Toyota Corolla, Nissan Juke",
           "start_fee": 0.99,
           "time_rates": {
             "minute": 0.09,
@@ -357,20 +343,6 @@
           ]
         },
         {
-          "car_model": "Toyota RAV 4",
-          "start_fee": 0.99,
-          "time_rates": {
-            "minute": 0.13,
-            "day": 35.99
-          },
-          "distance_rate": 0.24,
-          "included_distance": 0,
-          "trip_packages": null,
-          "tags": [
-            "LIM"
-          ]
-        },
-        {
           "car_model": "VW e-Up!",
           "start_fee": 0.99,
           "time_rates": {
@@ -386,7 +358,7 @@
           ]
         },
         {
-          "car_model": "Tesla Model 3 Standard Range",
+          "car_model": "Tesla Model 3 Standard Range / Long Range",
           "start_fee": 0.99,
           "time_rates": {
             "minute": 0.15,
@@ -402,43 +374,11 @@
           ]
         },
         {
-          "car_model": "Tesla Model 3 Long Range",
-          "start_fee": 0.99,
-          "time_rates": {
-            "minute": 0.15,
-            "day": 39.99,
-            "week": 251.94
-          },
-          "distance_rate": 0.25,
-          "included_distance": 0,
-          "trip_packages": null,
-          "tags": [
-            "LIM",
-            "EV"
-          ]
-        },
-        {
-          "car_model": "Tesla Model 3 Performance",
+          "car_model": "Tesla Model 3 Performance, Tesla Model Y Standard Range / Long Range",
           "start_fee": 0.99,
           "time_rates": {
             "minute": 0.19,
             "day": 59.99
-          },
-          "distance_rate": 0.25,
-          "included_distance": 0,
-          "trip_packages": null,
-          "tags": [
-            "LIM",
-            "EV"
-          ]
-        },
-        {
-          "car_model": "Tesla Model Y Standard Range",
-          "start_fee": 0.99,
-          "time_rates": {
-            "minute": 0.19,
-            "day": 59.99,
-            "week": 377.94
           },
           "distance_rate": 0.25,
           "included_distance": 0,

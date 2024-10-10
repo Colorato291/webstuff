@@ -117,7 +117,7 @@ async function fetchData() {
         return null;
     }
 }
-
+2
 function calculateDurationPrice(inputData, car, companyName) {
     if (companyName === "Avis Now" && inputData % 15 !== 0) {
         inputData += (15 - inputData % 15);
