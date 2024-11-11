@@ -555,7 +555,7 @@
           "time_rates": {
             "day": 30
           },
-          "distance_rate": 0.09,
+          "distance_rate": 0.10,
           "included_distance": 0,
           "trip_packages": null,
           "tags": [
@@ -567,7 +567,7 @@
           "time_rates": {
             "day": 30
           },
-          "distance_rate": 0.09,
+          "distance_rate": 0.10,
           "included_distance": 0,
           "trip_packages": null,
           "tags": [
