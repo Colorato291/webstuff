@@ -18,7 +18,7 @@
               "name": "1 H + 10 KM",
               "duration": 60,
               "included_distance": 10,
-              "price": 7.39
+              "price": 5.29
             },
             {
               "name": "270 MIN. + 310 KM",
@@ -290,7 +290,7 @@
           "car_model": "Toyota Yaris",
           "start_fee": 0.99,
           "time_rates": {
-            "minute": 0.07,
+            "minute": 0.08,
             "day": 22.99
           },
           "distance_rate": 0.17,
@@ -304,7 +304,7 @@
           "car_model": "Toyota Corolla, Nissan Juke",
           "start_fee": 0.99,
           "time_rates": {
-            "minute": 0.09,
+            "minute": 0.10,
             "day": 23.99
           },
           "distance_rate": 0.19,
@@ -318,7 +318,7 @@
           "car_model": "Toyota C-HR",
           "start_fee": 0.99,
           "time_rates": {
-            "minute": 0.12,
+            "minute": 0.13,
             "day": 25.99
           },
           "distance_rate": 0.23,
@@ -332,7 +332,7 @@
           "car_model": "Nissan Qashqai",
           "start_fee": 0.99,
           "time_rates": {
-            "minute": 0.13,
+            "minute": 0.14,
             "day": 35.99
           },
           "distance_rate": 0.24,
@@ -361,8 +361,8 @@
           "car_model": "Tesla Model 3 Standard Range / Long Range",
           "start_fee": 0.99,
           "time_rates": {
-            "minute": 0.15,
-            "day": 39.99,
+            "minute": 0.17,
+            "day": 44.99,
             "week": 251.94
           },
           "distance_rate": 0.25,
@@ -377,8 +377,8 @@
           "car_model": "Tesla Model 3 Performance, Tesla Model Y Standard Range / Long Range",
           "start_fee": 0.99,
           "time_rates": {
-            "minute": 0.19,
-            "day": 59.99
+            "minute": 0.21,
+            "day": 64.99
           },
           "distance_rate": 0.25,
           "included_distance": 0,
@@ -426,7 +426,7 @@
       "name": "Bolt",
       "cars": [
         {
-          "car_model": "Skoda Fabia, Audi A1, Hyundai Bayon",
+          "car_model": "Audi A1, Hyundai Bayon",
           "start_fee": 0,
           "time_rates": {
             "minute": 0.12,
@@ -439,7 +439,20 @@
           "tags": []
         },
         {
-          "car_model": "Toyota Corolla, Peugeot 208",
+          "car_model": "Peugeot 208",
+          "start_fee": 0,
+          "time_rates": {
+            "minute": 0.11,
+            "hour": 4.4,
+            "day": 16.9
+          },
+          "distance_rate": 0.25,
+          "included_distance": 0,
+          "trip_packages": null,
+          "tags": []
+        },
+        {
+          "car_model": "Toyota Corolla",
           "start_fee": 0,
           "time_rates": {
             "minute": 0.13,
@@ -455,8 +468,8 @@
           "car_model": "Audi A3",
           "start_fee": 0,
           "time_rates": {
-            "minute": 0.13,
-            "hour": 5.2,
+            "minute": 0.14,
+            "hour": 5.87,
             "day": 17.56
           },
           "distance_rate": 0.26,
@@ -512,19 +525,6 @@
             "day": 31.84
           },
           "distance_rate": 0.28,
-          "included_distance": 0,
-          "trip_packages": null,
-          "tags": []
-        },
-        {
-          "car_model": "BMW 4 Convertible",
-          "start_fee": 0,
-          "time_rates": {
-            "minute": 0.32,
-            "hour": 18.9,
-            "day": 79.9
-          },
-          "distance_rate": 0.29,
           "included_distance": 0,
           "trip_packages": null,
           "tags": []
