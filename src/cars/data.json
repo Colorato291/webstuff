@@ -389,35 +389,17 @@
           ]
         },
         {
-          "car_model": "Audi Q4 e-tron",
+          "car_model": "Toyota C-HR (MESA)",
           "start_fee": 0.99,
           "time_rates": {
-            "minute": 0.22,
-            "day": 69.99,
-            "week": 440.94
+            "minute": 0.09,
+            "day": 18.99
           },
-          "distance_rate": 0.25,
+          "distance_rate": 0.29,
           "included_distance": 0,
           "trip_packages": null,
           "tags": [
-            "LIM",
-            "EV"
-          ]
-        },
-        {
-          "car_model": "Audi e-tron 55 Sprotback",
-          "start_fee": 0.99,
-          "time_rates": {
-            "minute": 0.27,
-            "day": 79.99,
-            "week": 503.04
-          },
-          "distance_rate": 0.25,
-          "included_distance": 0,
-          "trip_packages": null,
-          "tags": [
-            "LIM",
-            "EV"
+            "LIM"
           ]
         }
       ]
