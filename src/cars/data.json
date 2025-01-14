@@ -21,12 +21,6 @@
               "price": 5.29
             },
             {
-              "name": "1 H + 10 KM",
-              "duration": 60,
-              "included_distance": 10,
-              "price": 5.29
-            },
-            {
               "name": "270 MIN. + 310 KM",
               "duration": 270,
               "included_distance": 310,
@@ -414,14 +408,14 @@
       "name": "Bolt",
       "cars": [
         {
-          "car_model": "Audi A1, Hyundai Bayon",
+          "car_model": "Audi A1",
           "start_fee": 0,
           "time_rates": {
-            "minute": 0.12,
-            "hour": 4.19,
-            "day": 15.89
+            "minute": 0.13,
+            "hour": 4.5,
+            "day": 18.9
           },
-          "distance_rate": 0.25,
+          "distance_rate": 0.26,
           "included_distance": 0,
           "trip_packages": null,
           "tags": []
@@ -430,11 +424,11 @@
           "car_model": "Peugeot 208",
           "start_fee": 0,
           "time_rates": {
-            "minute": 0.11,
-            "hour": 4.4,
-            "day": 16.9
+            "minute": 0.12,
+            "hour": 4.9,
+            "day": 18.9
           },
-          "distance_rate": 0.25,
+          "distance_rate": 0.26,
           "included_distance": 0,
           "trip_packages": null,
           "tags": []
@@ -443,37 +437,24 @@
           "car_model": "Toyota Corolla",
           "start_fee": 0,
           "time_rates": {
-            "minute": 0.13,
-            "hour": 5.2,
-            "day": 17.56
-          },
-          "distance_rate": 0.26,
-          "included_distance": 0,
-          "trip_packages": null,
-          "tags": []
-        },
-        {
-          "car_model": "Audi A3",
-          "start_fee": 0,
-          "time_rates": {
             "minute": 0.14,
-            "hour": 5.87,
-            "day": 17.56
-          },
-          "distance_rate": 0.26,
-          "included_distance": 0,
-          "trip_packages": null,
-          "tags": []
-        },
-        {
-          "car_model": "Peugeot 2008, Audi Q2, Toyota Yaris Cross",
-          "start_fee": 0,
-          "time_rates": {
-            "minute": 0.14,
-            "hour": 5.45,
-            "day": 19.24
+            "hour": 5.9,
+            "day": 19.9
           },
           "distance_rate": 0.27,
+          "included_distance": 0,
+          "trip_packages": null,
+          "tags": []
+        },
+        {
+          "car_model": "Audi A3, Peugeot 2008, Audi Q2",
+          "start_fee": 0,
+          "time_rates": {
+            "minute": 0.15,
+            "hour": 5.9,
+            "day": 21.9
+          },
+          "distance_rate": 0.28,
           "included_distance": 0,
           "trip_packages": null,
           "tags": []
@@ -482,17 +463,17 @@
           "car_model": "Toyota C-HR",
           "start_fee": 0,
           "time_rates": {
-            "minute": 0.14,
-            "hour": 5.45,
-            "day": 19.24
+            "minute": 0.15,
+            "hour": 5.9,
+            "day": 21.9
           },
-          "distance_rate": 0.26,
+          "distance_rate": 0.27,
           "included_distance": 0,
           "trip_packages": null,
           "tags": []
         },
         {
-          "car_model": "Audi A5",
+          "car_model": "Audi A5 (outdated pricing)",
           "start_fee": 0,
           "time_rates": {
             "minute": 0.2,
@@ -508,58 +489,27 @@
           "car_model": "Audi A4",
           "start_fee": 0,
           "time_rates": {
-            "minute": 0.16,
-            "hour": 9.16,
-            "day": 31.84
+            "minute": 0.17,
+            "hour": 9.90,
+            "day": 35.9
           },
-          "distance_rate": 0.28,
+          "distance_rate": 0.29,
           "included_distance": 0,
           "trip_packages": null,
           "tags": []
-        }
-      ]
-    },
-    {
-      "name": "Avis Now",
-      "cars": [
-        {
-          "car_model": "Cupra Born",
-          "start_fee": 0,
-          "time_rates": {
-            "minute": 0.12,
-            "hour": 4.99,
-            "day": 24.5
-          },
-          "distance_rate": 0.22,
-          "included_distance": 0,
-          "trip_packages": null,
-          "tags": [
-            "EV"
-          ]
         },
         {
-          "car_model": "Seat Leon STW",
+          "car_model": "VW T-Roc Cabrio",
           "start_fee": 0,
           "time_rates": {
-            "day": 30
+            "minute": 0.17,
+            "hour": 8.9,
+            "day": 34
           },
-          "distance_rate": 0.10,
+          "distance_rate": 0.27,
           "included_distance": 0,
           "trip_packages": null,
-          "tags": [
-          ]
-        },
-        {
-          "car_model": "Renault Arkana",
-          "start_fee": 0,
-          "time_rates": {
-            "day": 30
-          },
-          "distance_rate": 0.10,
-          "included_distance": 0,
-          "trip_packages": null,
-          "tags": [
-          ]
+          "tags": []
         }
       ]
     },
