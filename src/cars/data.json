@@ -301,7 +301,7 @@
           ]
         },
         {
-          "car_model": "Toyota Yaris (2d)",
+          "car_model": "(2d) Toyota Yaris, Toyota Corolla, Nissan Juke",
           "start_fee": 0,
           "time_rates": {
             "2 day": 40
@@ -356,7 +356,7 @@
           ]
         },
         {
-          "car_model": "Nissan Qashqai (2d)",
+          "car_model": "(2d) Nissan Qashqai, Toyota CH-R",
           "start_fee": 0,
           "time_rates": {
             "2 day": 47
@@ -400,7 +400,7 @@
           ]
         },
         {
-          "car_model": "Tesla Model 3 Standard Range (2d)",
+          "car_model": "(2d) Tesla Model 3 SR/LR",
           "start_fee": 0,
           "time_rates": {
             "2 day": 57
@@ -428,13 +428,12 @@
           ]
         },
         {
-          "car_model": "Toyota C-HR (MESA)",
-          "start_fee": 0.99,
+          "car_model": "(2d) Tesla Model 3 P, Model Y SR/LR",
+          "start_fee": 0,
           "time_rates": {
-            "minute": 0.09,
-            "day": 18.99
+            "2 day": 67
           },
-          "distance_rate": 0.29,
+          "distance_rate": 0.12,
           "included_distance": 0,
           "trip_packages": null,
           "tags": [
