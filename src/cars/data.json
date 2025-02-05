@@ -446,19 +446,6 @@
       "name": "Bolt",
       "cars": [
         {
-          "car_model": "Audi A1",
-          "start_fee": 0,
-          "time_rates": {
-            "minute": 0.13,
-            "hour": 4.5,
-            "day": 18.9
-          },
-          "distance_rate": 0.26,
-          "included_distance": 0,
-          "trip_packages": null,
-          "tags": []
-        },
-        {
           "car_model": "Peugeot 208",
           "start_fee": 0,
           "time_rates": {
@@ -485,7 +472,7 @@
           "tags": []
         },
         {
-          "car_model": "Audi A3, Peugeot 2008, Audi Q2",
+          "car_model": "Audi A3, Peugeot 2008, Audi Q2, VW T-Cross",
           "start_fee": 0,
           "time_rates": {
             "minute": 0.15,
@@ -511,14 +498,14 @@
           "tags": []
         },
         {
-          "car_model": "Audi A5 (outdated pricing)",
+          "car_model": "Audi A5",
           "start_fee": 0,
           "time_rates": {
-            "minute": 0.2,
-            "hour": 11.68,
-            "day": 40.24
+            "minute": 0.19,
+            "hour": 12.3,
+            "day": 45.9
           },
-          "distance_rate": 0.28,
+          "distance_rate": 0.30,
           "included_distance": 0,
           "trip_packages": null,
           "tags": []
