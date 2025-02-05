@@ -553,6 +553,26 @@
       ]
     },
     {
+      "name": "Avis Now",
+      "cars": [
+        {
+          "car_model": "Cupra Born",
+          "start_fee": 0,
+          "time_rates": {
+            "minute": 0.12,
+            "hour": 4.99,
+            "day": 24.5
+          },
+          "distance_rate": 0.22,
+          "included_distance": 0,
+          "trip_packages": null,
+          "tags": [
+            "EV"
+          ]
+        }
+      ]
+    },
+    {
       "name": "Sixt/Avis/Hertz/Europcar",
       "cars": [
         {
