@@ -347,10 +347,12 @@ async function priceCalculations(inputData){
                 car.distance_rate*
                 Math.max(kilometers-included_distance, 0)
             );
+
             const total_price = parseFloat(distance_price + time_price + car.start_fee).toFixed(2);
             
             if (included_distance < kilometers) optimal_duration += ` + ${kilometers} km`;
-            const car_model = (car.tags !== null && car.tags.includes('LIM')) ? car.car_model + ' ⚡︎' : car.car_model ;
+            const car_model = (car.tags !== null && car.tags.includes('EV')) ? car.car_model + ' ⚡︎' : car.car_model;
+            
             result_data_payload.push(
                 [company.name, car_model, optimal_duration, total_price]
             );
