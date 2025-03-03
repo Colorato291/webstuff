@@ -233,36 +233,99 @@ function formatDurationType(type) {
 }
 
 function getBestPackage(car, time, kilometers, companyName) {
-    let cheapestPackagePrice = Infinity;
-    let cheapestPackageName = null;
-    car.trip_packages.forEach(package => {
-        let [packageKilometers, packageDuration, packagePrice, packageName] =
-        [package.included_distance, package.duration, package.price, package.name.toLowerCase()];
-        const additionalDuration = Math.max(time-packageDuration, 0);
-        const additionalKilometers = Math.max(kilometers-packageKilometers, 0);
-        let {time_price, optimal_duration} = calculateDurationPrice(additionalDuration, car, companyName);
-        packagePrice = packagePrice + time_price + additionalKilometers*car.distance_rate;
-        if (optimal_duration !== '' || additionalKilometers !== 0) {
-            packageName += ' | Additionally: ';
-            if (optimal_duration !== '' && additionalKilometers !== 0) {
-                packageName += `${optimal_duration} + ${additionalKilometers} km`;
-            } else if (optimal_duration !== '') {
-                packageName += optimal_duration;
-            } else if (additionalKilometers !== 0) {
-                packageName += `${additionalKilometers} km`;
+    const cache = new Map();
+    
+    function findBestCombination(remainingTime, remainingKm) {
+        const key = `${remainingTime},${remainingKm}`;
+        
+        if (cache.has(key)) {
+            return cache.get(key);
+        }
+        
+        let {time_price, optimal_duration} = calculateDurationPrice(remainingTime, car, companyName);
+        let distancePrice = remainingKm * car.distance_rate;
+        let bestPrice = time_price + distancePrice;
+        let bestCombo = [];
+        
+        if (optimal_duration) {
+            bestCombo.push(optimal_duration + (remainingKm > 0 ? ` + ${remainingKm} km` : ''));
+        } else if (remainingKm > 0) {
+            bestCombo.push(`${remainingKm} km`);
+        }
+        
+        for (const package of car.trip_packages) {
+            const packageKm = package.included_distance;
+            const packageTime = package.duration;
+            const packagePrice = package.price;
+            const packageName = package.name.toLowerCase();
+            
+            if (packageTime <= remainingTime || packageKm <= remainingKm) {
+                const newRemainingTime = Math.max(0, remainingTime - packageTime);
+                const newRemainingKm = Math.max(0, remainingKm - packageKm);
+                
+                const subResult = findBestCombination(newRemainingTime, newRemainingKm);
+                const totalPrice = packagePrice + subResult.price;
+                
+                if (totalPrice < bestPrice) {
+                    bestPrice = totalPrice;
+                    bestCombo = [packageName, ...subResult.combo];
+                }
             }
         }
-
-        if (cheapestPackagePrice >= packagePrice){
-            cheapestPackageName = packageName;
-            cheapestPackagePrice = packagePrice;
-        }
-    });
+        
+        const result = { price: bestPrice, combo: bestCombo };
+        cache.set(key, result);
+        return result;
+    }
+    
+    const result = findBestCombination(time, kilometers);
+    
+    let consolidatedCombo = consolidateItems(result.combo);
+    
+    const displayText = result.combo.length > 0 && result.combo[0].includes('km') === false ? 
+        `Package: ${consolidatedCombo}` : 
+        consolidatedCombo;
+    
     return [
         companyName,
         car.car_model,
-        `Package: ${cheapestPackageName}`,
-        parseFloat(cheapestPackagePrice).toFixed(2)];
+        displayText,
+        parseFloat(result.price).toFixed(2)
+    ];
+}
+
+// Helper function to consolidate identical items in an array
+function consolidateItems(items) {
+    if (!items || items.length === 0) return '';
+    
+    const counts = {};
+    items.forEach(item => {
+        counts[item] = (counts[item] || 0) + 1;
+    });
+    
+    const consolidatedItems = Object.entries(counts).map(([item, count]) => {
+        return count > 1 ? `${count} x ${item}` : item;
+    });
+    
+    const packages = [];
+    const additionals = [];
+    
+    consolidatedItems.forEach(item => {
+        if (item.includes('Additionally:') || item.includes('km') || item.includes('min') || 
+            item.includes('h') || item.includes('d')) {
+            additionals.push(item.replace('Additionally: ', ''));
+        } else {
+            packages.push(item);
+        }
+    });
+    
+    // Format the final output
+    let result = packages.join(' + ');
+    if (additionals.length > 0) {
+        result += (result ? ' | Additionally: ' : '') + additionals.join(' + ');
+    }
+    
+    return result;
 }
 
 async function priceCalculations(inputData){ 
