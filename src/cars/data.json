@@ -287,52 +287,11 @@
       "name": "CarGuru",
       "cars": [
         {
-          "car_model": "Toyota Yaris",
+          "car_model": "Toyota Yaris, Nissan Juke",
           "start_fee": 0.99,
           "time_rates": {
-            "minute": 0.08,
-            "day": 22.99
-          },
-          "distance_rate": 0.17,
-          "included_distance": 0,
-          "trip_packages": null,
-          "tags": [
-            "LIM"
-          ]
-        },
-        {
-          "car_model": "(2d) Toyota Yaris, Toyota Corolla, Nissan Juke",
-          "start_fee": 0,
-          "time_rates": {
-            "2 day": 40
-          },
-          "distance_rate": 0.12,
-          "included_distance": 0,
-          "trip_packages": null,
-          "tags": [
-            "LIM"
-          ]
-        },
-        {
-          "car_model": "Toyota Corolla, Nissan Juke",
-          "start_fee": 0.99,
-          "time_rates": {
-            "minute": 0.10,
-            "day": 23.99
-          },
-          "distance_rate": 0.19,
-          "included_distance": 0,
-          "trip_packages": null,
-          "tags": [
-            "LIM"
-          ]
-        },
-        {
-          "car_model": "Toyota C-HR",
-          "start_fee": 0.99,
-          "time_rates": {
-            "minute": 0.13,
-            "day": 25.99
+            "minute": 0.09,
+            "day": 20.99
           },
           "distance_rate": 0.23,
           "included_distance": 0,
@@ -342,11 +301,11 @@
           ]
         },
         {
-          "car_model": "Nissan Qashqai",
+          "car_model": "Toyota Corolla",
           "start_fee": 0.99,
           "time_rates": {
-            "minute": 0.14,
-            "day": 35.99
+            "minute": 0.11,
+            "day": 21.99
           },
           "distance_rate": 0.24,
           "included_distance": 0,
@@ -356,12 +315,13 @@
           ]
         },
         {
-          "car_model": "(2d) Nissan Qashqai, Toyota CH-R",
-          "start_fee": 0,
+          "car_model": "Toyota C-HR, Nissan Qashqai",
+          "start_fee": 0.99,
           "time_rates": {
-            "2 day": 47
+            "minute": 0.26,
+            "day": 22.99
           },
-          "distance_rate": 0.12,
+          "distance_rate": 0.23,
           "included_distance": 0,
           "trip_packages": null,
           "tags": [
@@ -388,28 +348,14 @@
           "start_fee": 0.99,
           "time_rates": {
             "minute": 0.17,
-            "day": 44.99,
-            "week": 251.94
+            "day": 44.99
           },
-          "distance_rate": 0.25,
+          "distance_rate": 0.27,
           "included_distance": 0,
           "trip_packages": null,
           "tags": [
             "LIM",
             "EV"
-          ]
-        },
-        {
-          "car_model": "(2d) Tesla Model 3 SR/LR",
-          "start_fee": 0,
-          "time_rates": {
-            "2 day": 57
-          },
-          "distance_rate": 0.12,
-          "included_distance": 0,
-          "trip_packages": null,
-          "tags": [
-            "LIM"
           ]
         },
         {
@@ -419,25 +365,12 @@
             "minute": 0.21,
             "day": 64.99
           },
-          "distance_rate": 0.25,
+          "distance_rate": 0.27,
           "included_distance": 0,
           "trip_packages": null,
           "tags": [
             "LIM",
             "EV"
-          ]
-        },
-        {
-          "car_model": "(2d) Tesla Model 3 P, Model Y SR/LR",
-          "start_fee": 0,
-          "time_rates": {
-            "2 day": 67
-          },
-          "distance_rate": 0.12,
-          "included_distance": 0,
-          "trip_packages": null,
-          "tags": [
-            "LIM"
           ]
         }
       ]
