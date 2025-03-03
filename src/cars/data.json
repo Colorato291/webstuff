@@ -296,9 +296,7 @@
           "distance_rate": 0.23,
           "included_distance": 0,
           "trip_packages": null,
-          "tags": [
-            "LIM"
-          ]
+          "tags": null
         },
         {
           "car_model": "Toyota Corolla",
@@ -310,23 +308,19 @@
           "distance_rate": 0.24,
           "included_distance": 0,
           "trip_packages": null,
-          "tags": [
-            "LIM"
-          ]
+          "tags": null
         },
         {
           "car_model": "Toyota C-HR, Nissan Qashqai",
           "start_fee": 0.99,
           "time_rates": {
-            "minute": 0.26,
+            "minute": 0.11,
             "day": 22.99
           },
           "distance_rate": 0.23,
           "included_distance": 0,
           "trip_packages": null,
-          "tags": [
-            "LIM"
-          ]
+          "tags": null
         },
         {
           "car_model": "VW e-Up!",
@@ -339,7 +333,6 @@
           "included_distance": 0,
           "trip_packages": null,
           "tags": [
-            "LIM",
             "EV"
           ]
         },
@@ -354,7 +347,6 @@
           "included_distance": 0,
           "trip_packages": null,
           "tags": [
-            "LIM",
             "EV"
           ]
         },
@@ -369,7 +361,6 @@
           "included_distance": 0,
           "trip_packages": null,
           "tags": [
-            "LIM",
             "EV"
           ]
         }

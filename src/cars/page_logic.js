@@ -140,7 +140,7 @@ function calculateDurationPrice(inputData, car, companyName) {
     rates.sort((a, b) => b.duration - a.duration);
 
     // Special handling for LIM vehicles
-    if (car.tags.includes('LIM')) {
+    if (car.tags != null && car.tags.includes('LIM')) {
         const shortestRate = rates[rates.length - 1];
         let bestPrice = Infinity;
         let bestDuration = [];
@@ -222,7 +222,7 @@ function formatDurationType(type) {
     const units = formattedType.split(' ');
     if (units.length > 1) {
         prefix = units[0];
-}
+    }
 
     if (formattedType.includes('minute')) formattedType = 'min';
     else if (formattedType.includes('hour')) formattedType = 'h';
@@ -287,7 +287,7 @@ async function priceCalculations(inputData){
             const total_price = parseFloat(distance_price + time_price + car.start_fee).toFixed(2);
             
             if (included_distance < kilometers) optimal_duration += ` + ${kilometers} km`;
-            const car_model = car.tags.includes('EV') ? car.car_model + ' ⚡︎' : car.car_model ;
+            const car_model = (car.tags !== null && car.tags.includes('LIM')) ? car.car_model + ' ⚡︎' : car.car_model ;
             result_data_payload.push(
                 [company.name, car_model, optimal_duration, total_price]
             );
