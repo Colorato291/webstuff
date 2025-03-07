@@ -323,20 +323,6 @@
           "tags": null
         },
         {
-          "car_model": "VW e-Up!",
-          "start_fee": 0.99,
-          "time_rates": {
-            "minute": 0.05,
-            "day": 34.99
-          },
-          "distance_rate": 0.1,
-          "included_distance": 0,
-          "trip_packages": null,
-          "tags": [
-            "EV"
-          ]
-        },
-        {
           "car_model": "Tesla Model 3 SR/LR",
           "start_fee": 0.99,
           "time_rates": {
