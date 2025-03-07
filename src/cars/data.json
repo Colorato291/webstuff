@@ -317,7 +317,7 @@
             "minute": 0.11,
             "day": 22.99
           },
-          "distance_rate": 0.23,
+          "distance_rate": 0.26,
           "included_distance": 0,
           "trip_packages": null,
           "tags": null
