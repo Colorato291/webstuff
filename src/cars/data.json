@@ -18,7 +18,7 @@
               "name": "1 H + 10 KM",
               "duration": 60,
               "included_distance": 10,
-              "price": 5.29
+              "price": 5.39
             },
             {
               "name": "270 MIN. + 310 KM",
@@ -138,7 +138,7 @@
               "name": "1 D + 100 KM",
               "duration": 1440,
               "included_distance": 100,
-              "price": 43.9
+              "price": 43.9 
             },
             {
               "name": "1 D + 150 KM",
@@ -175,6 +175,12 @@
               "duration": 2880,
               "included_distance": 250,
               "price": 101.4
+            },
+            {
+              "name": "2 D + 320 KM",
+              "duration": 2880,
+              "included_distance": 320,
+              "price": 99
             },
             {
               "name": "2 D + 400 KM",
@@ -356,27 +362,40 @@
       "name": "Bolt",
       "cars": [
         {
-          "car_model": "Peugeot 208",
+          "car_model": "Peugeot 208, Toyota Yaris",
           "start_fee": 0,
           "time_rates": {
             "minute": 0.12,
-            "hour": 4.9,
-            "day": 18.9
+            "hour": 3.96,
+            "day": 15.21
           },
-          "distance_rate": 0.26,
+          "distance_rate": 0.23,
           "included_distance": 0,
           "trip_packages": null,
           "tags": []
         },
         {
-          "car_model": "Toyota Corolla/Yaris Cross",
+          "car_model": "Toyota Corolla",
           "start_fee": 0,
           "time_rates": {
-            "minute": 0.14,
-            "hour": 5.9,
-            "day": 19.9
+            "minute": 0.13,
+            "hour": 5.31,
+            "day": 17.91
           },
-          "distance_rate": 0.27,
+          "distance_rate": 0.24,
+          "included_distance": 0,
+          "trip_packages": null,
+          "tags": []
+        },
+        {
+          "car_model": "Toyota Yaris Cross",
+          "start_fee": 0,
+          "time_rates": {
+            "minute": 0.12,
+            "hour": 4.67,
+            "day": 17.91
+          },
+          "distance_rate": 0.24,
           "included_distance": 0,
           "trip_packages": null,
           "tags": []
@@ -385,11 +404,11 @@
           "car_model": "Audi A3, Peugeot 2008, Audi Q2, VW T-Cross",
           "start_fee": 0,
           "time_rates": {
-            "minute": 0.15,
-            "hour": 5.9,
-            "day": 21.9
+            "minute": 0.14,
+            "hour": 5.31,
+            "day": 19.71
           },
-          "distance_rate": 0.28,
+          "distance_rate": 0.25,
           "included_distance": 0,
           "trip_packages": null,
           "tags": []
@@ -398,11 +417,11 @@
           "car_model": "Toyota C-HR",
           "start_fee": 0,
           "time_rates": {
-            "minute": 0.15,
-            "hour": 5.9,
-            "day": 21.9
+            "minute": 0.14,
+            "hour": 5.31,
+            "day": 19.71
           },
-          "distance_rate": 0.27,
+          "distance_rate": 0.24,
           "included_distance": 0,
           "trip_packages": null,
           "tags": []
@@ -411,11 +430,11 @@
           "car_model": "Audi A5",
           "start_fee": 0,
           "time_rates": {
-            "minute": 0.19,
-            "hour": 12.3,
-            "day": 45.9
+            "minute": 0.15,
+            "hour": 9.81,
+            "day": 41.31
           },
-          "distance_rate": 0.30,
+          "distance_rate": 0.26,
           "included_distance": 0,
           "trip_packages": null,
           "tags": []
@@ -424,11 +443,11 @@
           "car_model": "Audi A4",
           "start_fee": 0,
           "time_rates": {
-            "minute": 0.17,
-            "hour": 9.90,
-            "day": 35.9
+            "minute": 0.14,
+            "hour": 8.91,
+            "day": 32.31
           },
-          "distance_rate": 0.29,
+          "distance_rate": 0.26,
           "included_distance": 0,
           "trip_packages": null,
           "tags": []
@@ -437,11 +456,24 @@
           "car_model": "VW T-Roc Cabrio",
           "start_fee": 0,
           "time_rates": {
-            "minute": 0.17,
-            "hour": 8.9,
-            "day": 34
+            "minute": 0.15,
+            "hour": 8.01,
+            "day": 30.6
           },
-          "distance_rate": 0.27,
+          "distance_rate": 0.24,
+          "included_distance": 0,
+          "trip_packages": null,
+          "tags": []
+        },
+        {
+          "car_model": "BMW 4 Series Cabrio",
+          "start_fee": 0,
+          "time_rates": {
+            "minute": 0.29,
+            "hour": 17.01,
+            "day": 71.91
+          },
+          "distance_rate": 0.26,
           "included_distance": 0,
           "trip_packages": null,
           "tags": []
