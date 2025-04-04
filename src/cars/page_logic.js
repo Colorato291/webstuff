@@ -133,58 +133,56 @@ function calculateDurationPrice(inputData, car, companyName) {
         else if (type.includes('week')) duration = 7 * 24 * 60 * (parseInt(type) || 1);
         else duration = 1;
 
-        return { type, duration, price, pricePerMinute: price / duration };
+        return {type, duration, price};
     });
 
     // Sort rates by duration (descending)
-    rates.sort((a, b) => b.duration - a.duration);
+    rates.sort((a, b) => a.duration - b.duration);
 
     // Special handling for LIM vehicles
-    if (car.tags != null && car.tags.includes('LIM')) {
-        const shortestRate = rates[rates.length - 1];
-        let bestPrice = Infinity;
-        let bestDuration = [];
-
-        for (const rate of rates) {
-            if (rate === shortestRate) continue;
-
-            const wholeRatePeriods = Math.floor(inputData / rate.duration);
-            const remainder = inputData % rate.duration;
-
-            const totalPrice = 
-                (wholeRatePeriods * rate.price) + 
-                (remainder > 0 ? Math.ceil(remainder / shortestRate.duration) * shortestRate.price : 0);
-
-            if (totalPrice < bestPrice) {
-                bestPrice = totalPrice;
-                bestDuration = [
-                    ...(wholeRatePeriods > 0 ? [{ type: rate.type, quantity: wholeRatePeriods }] : []),
-                    ...(remainder > 0 ? [{ type: shortestRate.type, quantity: Math.ceil(remainder / shortestRate.duration) }] : [])
-                ];
+    if (car.tags && car.tags.includes('LIM')) {
+        const smallestDurationRate = rates[0];
+        let coveringRate = null;
+        let lowerRate = null;
+    
+        for (let i = 0; i < rates.length; i++) {
+            if (rates[i].duration >= inputData) {
+                coveringRate = rates[i];
+                if (i > 0) lowerRate = rates[i - 1];
+                break;
             }
         }
-
-        // Fallback to shortest rate if no better option found
-        if (bestDuration.length === 0) {
-            bestDuration = [{ 
-                type: shortestRate.type, 
-                quantity: Math.ceil(inputData / shortestRate.duration) 
-            }];
-            bestPrice = Math.ceil(inputData / shortestRate.duration) * shortestRate.price;
+        if (lowerRate) {
+            const remainder = inputData - lowerRate.duration;
+            const lowerPrice = lowerRate.price + remainder * smallestDurationRate.price;
+            const coveringPrice = coveringRate.price;
+            if(lowerPrice < coveringPrice) {
+                return {
+                    time_price: lowerPrice,
+                    optimal_duration: [
+                        `${formatDurationType(lowerRate.type)} + ${Math.ceil(remainder / smallestDurationRate.duration)} ${formatDurationType(smallestDurationRate.type)}`
+                    ]
+                };
+            }
+            else {
+                return {
+                    time_price: coveringPrice,
+                    optimal_duration: [
+                        `${formatDurationType(coveringRate.type)}`
+                    ]
+                };
+            }
         }
-
         return {
-            time_price: bestPrice,
-            optimal_duration: bestDuration.map(d => 
-                `${d.quantity} ${formatDurationType(d.type)}`
-            ).join(' + ')
+            time_price: smallestDurationRate.price * inputData,
+            optimal_duration: [
+                `${Math.ceil(inputData / smallestDurationRate.duration)} ${formatDurationType(smallestDurationRate.type)}`
+            ]
         };
     }
 
-    // Non-LIM vehicle approach
+    // Non-LIM vehicle approach (remains unchanged)
     const options = [];
-
-    // Try all possible rate combinations
     for (const mainRate of rates) {
         for (const secondaryRate of rates) {
             const wholeRatePeriods = Math.floor(inputData / mainRate.duration);
@@ -203,7 +201,6 @@ function calculateDurationPrice(inputData, car, companyName) {
         }
     }
 
-    // Find the cheapest option
     const cheapestOption = options.reduce((best, current) => 
         current.totalPrice < best.totalPrice ? current : best
     );
