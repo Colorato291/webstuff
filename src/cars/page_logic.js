@@ -152,7 +152,7 @@ function calculateDurationPrice(inputData, car, companyName) {
                 break;
             }
         }
-        if (lowerRate) {
+        if (lowerRate != null && lowerRate != smallestDurationRate) {
             const remainder = inputData - lowerRate.duration;
             const lowerPrice = lowerRate.price + remainder * smallestDurationRate.price;
             const coveringPrice = coveringRate.price;

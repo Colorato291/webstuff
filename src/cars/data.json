@@ -372,7 +372,7 @@
           "car_model": "Tesla Model 3 P, Tesla Model Y SR/LR",
           "start_fee": 0.99,
           "time_rates": {
-            "1 minute": 0.34,
+            "minute": 0.34,
             "1 hour": 16.32,
             "3 hour": 34.27,
             "1 day": 58.26,
