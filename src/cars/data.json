@@ -5,11 +5,11 @@
       "cars": [
         {
           "car_model": "All cars",
-          "start_fee": 1.49,
+          "start_fee": 0.44,
           "time_rates": {
-            "minute": 0.12,
-            "hour": 5.49,
-            "day": 19.99
+            "minute": 0.14,
+            "hour": 6.19,
+            "day": 22.99
           },
           "distance_rate": 0.29,
           "included_distance": 0,
