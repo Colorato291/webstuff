@@ -397,7 +397,7 @@
           "distance_rate": 0.29,
           "included_distance": 0,
           "trip_packages": null,
-          "tags": ["LIM"]
+          "tags": null
         },
         {
           "car_model": "(Special) Toyota Yaris, Nissan Juke",
