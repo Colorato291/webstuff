@@ -297,7 +297,7 @@
           "start_fee": 0.99,
           "time_rates": {
             "minute": 0.21,
-            "1 hour": 10.08,
+            "1 hour": 8,
             "3 hour": 21.17,
             "1 day": 35.99,
             "2 day": 68.37,
@@ -316,7 +316,7 @@
           "start_fee": 0.99,
           "time_rates": {
             "minute": 0.27,
-            "1 hour": 12.96,
+            "1 hour": 8,
             "3 hour": 27.22,
             "1 day": 49.27,
             "2 day": 93.61,
@@ -335,7 +335,7 @@
           "start_fee": 0.99,
           "time_rates": {
             "minute": 0.28,
-            "1 hour": 13.44,
+            "1 hour": 8,
             "3 hour": 29.22,
             "1 day": 52.68,
             "2 day": 100.09,
@@ -354,7 +354,7 @@
           "start_fee": 0.99,
           "time_rates": {
             "minute": 0.33,
-            "1 hour": 15.84,
+            "1 hour": 8,
             "3 hour": 33.26,
             "1 day": 59.55,
             "2 day": 113.14,
@@ -373,7 +373,7 @@
           "start_fee": 0.99,
           "time_rates": {
             "minute": 0.37,
-            "1 hour": 17.76,
+            "1 hour": 8,
             "3 hour": 37.30,
             "1 day": 68.40,
             "2 day": 129.97,
