@@ -15,28 +15,22 @@
           "included_distance": 0,
           "trip_packages": [
             {
+              "name": "1 D + 50 KM",
+              "duration": 1440,
+              "included_distance": 50,
+              "price": 29.9
+            },
+            {
               "name": "1 H + 10 KM",
               "duration": 60,
               "included_distance": 10,
-              "price": 5.79
+              "price": 5.89
             },
             {
-              "name": "270 MIN. + 310 KM",
-              "duration": 270,
-              "included_distance": 310,
+              "name": "2 D + 320 KM ",
+              "duration": 2880,
+              "included_distance": 320,
               "price": 99.0
-            },
-            {
-              "name": "300 MIN. + 350 KM",
-              "duration": 300,
-              "included_distance": 350,
-              "price": 99.0
-            },
-            {
-              "name": "1 D + 75 KM",
-              "duration": 1440,
-              "included_distance": 75,
-              "price": 35.9
             },
             {
               "name": "30 MIN. + 5 KM",
@@ -129,16 +123,16 @@
               "price": 24.9
             },
             {
-              "name": "1 D + 50 KM",
+              "name": "1 D + 75 KM",
               "duration": 1440,
-              "included_distance": 50,
-              "price": 29.9
+              "included_distance": 75,
+              "price": 34.9
             },
             {
               "name": "1 D + 100 KM",
               "duration": 1440,
               "included_distance": 100,
-              "price": 43.9 
+              "price": 39.9
             },
             {
               "name": "1 D + 150 KM",
@@ -175,12 +169,6 @@
               "duration": 2880,
               "included_distance": 250,
               "price": 101.4
-            },
-            {
-              "name": "2 D + 320 KM",
-              "duration": 2880,
-              "included_distance": 320,
-              "price": 99
             },
             {
               "name": "2 D + 400 KM",
@@ -261,15 +249,15 @@
               "price": 364.9
             },
             {
-              "name": "14 D + 200 KM",
-              "duration": 20160,
-              "included_distance": 200,
-              "price": 401.9
-            },
-            {
               "name": "14 D + 600 KM",
               "duration": 20160,
               "included_distance": 600,
+              "price": 401.9
+            },
+            {
+              "name": "14 D + 1000 KM",
+              "duration": 20160,
+              "included_distance": 1000,
               "price": 511.9
             },
             {
