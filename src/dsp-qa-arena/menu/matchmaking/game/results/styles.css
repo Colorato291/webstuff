@@ -1,0 +1,194 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    font-family: 'DM Sans', system-ui, sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+    z-index: 1;
+    margin-top: -50px;
+}
+
+#logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 15px;
+}
+
+#arena-image {
+    max-width: 120px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#Logo {
+    font-weight: 300;
+    font-size: 30px;
+    margin: 0;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+#Logo:hover {
+    transform: scale(1.05);
+}
+
+#results-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+#results-container h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#results-container h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 5px 0;
+}
+
+#result-status {
+    margin: 10px 0;
+}
+
+#game-status {
+    font-size: 26px;
+    font-weight: 800;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#game-status.win {
+    background: rgba(34, 197, 94, 0.3);
+    color: #4ade80;
+}
+
+#game-status.lose {
+    background: rgba(239, 68, 68, 0.3);
+    color: #f87171;
+}
+
+#game-status.tie {
+    background: rgba(107, 114, 128, 0.3);
+    color: #e5e7eb;
+}
+
+#results-container p {
+    font-size: 20px;
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+#results-container p span {
+    font-weight: 700;
+}
+
+#powerups-used {
+    text-align: left;
+    margin: 10px 0;
+    width: 100%;
+    max-width: 300px;
+}
+
+#powerups-used ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+#powerups-used li {
+    font-size: 18px;
+    margin: 8px 0;
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#powerups-used li span {
+    font-weight: 700;
+    float: right;
+}
+
+#buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#exit-button {
+    align-self: center;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    background: #dc2626;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#exit-button:hover {
+    background: #b91c1c;
+    transform: translateY(-2px);
+}
+
+#exit-button:active {
+    transform: translateY(0);
+}
+
+#accuracy {
+    font-size: 20px;
+    font-weight: 400;
+    margin: 10px 0;
+    padding: 5px 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    display: inline-block;
+}

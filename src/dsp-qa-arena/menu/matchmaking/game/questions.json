@@ -1,0 +1,72 @@
+[
+  {
+    "id": "q1",
+    "text": "In which stage of development is the cost of fixing errors the highest?",
+    "options": [{ "text": "After release" }, { "text": "During functional testing" }, { "text": "During systems testing" }, { "text": "During development" }],
+    "correctAnswerIndex": 0,
+    "explanation": "Fixing defects post-release is far more expensive due to the impact on users, potential rework, and patch deployment overhead."
+  },
+  {
+    "id": "q2",
+    "text": "An incorrectly working software can cause what?",
+    "options": [{ "text": "Loss of time" }, { "text": "Loss of money" }, { "text": "Loss of reputation" }, { "text": "All of the above" }],
+    "correctAnswerIndex": 3,
+    "explanation": "Defective software leads to cascading consequences, from internal delays to public perception damage."
+  },
+  {
+    "id": "q3",
+    "text": "Which of the following best describes a test case?",
+    "options": [{ "text": "A document outlining software requirements" }, { "text": "A checklist of code changes" }, { "text": "A set of conditions under which a tester will determine if a feature works correctly" }, { "text": "A set of performance benchmarks for the system" }],
+    "correctAnswerIndex": 2,
+    "explanation": "A test case defines specific inputs, execution conditions, and expected results used to validate whether a feature meets requirements."
+  },
+  {
+    "id": "q4",
+    "text": "What is the main purpose of regression testing?",
+    "options": [{ "text": "To verify user requirements" }, { "text": "To ensure new code works" }, { "text": "To test the system's performance" }, { "text": "To check that unchanged parts of the software still work correctly" }],
+    "correctAnswerIndex": 3,
+    "explanation": "Regression testing ensures that new changes haven't broken existing functionality — a core QA task especially in agile environments."
+  },
+  {
+    "id": "q5",
+    "text": "What is the primary goal of Quality Assurance (QA) in software development?",
+    "options": [{ "text": "To write the application code" }, { "text": "To ensure the product meets specified requirements and is free of defects" }, { "text": "To deploy the software to production" }, { "text": "To design the user interface" }],
+    "correctAnswerIndex": 1,
+    "explanation": "Quality Assurance (QA) in software development focuses on ensuring that the software product meets the defined requirements, standards, and user expectations while minimizing defects."
+  },
+  {
+    "id": "q6",
+    "text": "Consider the following Python code fragment intended to calculate the square of a number:\ndef square(num):\n    return num * num\nWhich test case would most effectively identify a potential issue with this code?",
+    "options": [{ "text": "Test with num = 5 and expect output 25" }, { "text": "Test with num = -3 and expect output 9" }, { "text": "Test with num = \"2\" and expect output 4" }, { "text": "Test with num = 0 and expect output 0" }],
+    "correctAnswerIndex": 2,
+    "explanation": "The code does not validate input types. Passing a string (\"2\") would cause a TypeError, revealing a flaw in input handling."
+  },
+  {
+    "id": "q7",
+    "text": "Which type of testing focuses on verifying that the system works as expected from the end-user's perspective?",
+    "options": [{ "text": "Unit Testing" }, { "text": "Integration Testing" }, { "text": "Functional Testing" }, { "text": "Performance Testing" }],
+    "correctAnswerIndex": 2,
+    "explanation": "Functional testing focuses on testing the application's features and functionalities against specified requirements, ensuring that user interactions produce the intended results"
+  },
+  {
+    "id": "q8",
+    "text": "What is the purpose of Continuous Integration (CI) in the development process?",
+    "options": [{ "text": "Reduces the risk of errors" }, { "text": "Reduces the amount of manual work required" }, { "text": "Ensures that there is always a software build available" }, { "text": "All of the above" }],
+    "correctAnswerIndex": 3,
+    "explanation": "Continuous Integration (CI) is the practice of regularly merging code changes into a shared repository, followed by automated builds and tests."
+  },
+  {
+    "id": "q9",
+    "text": "A QA team is testing a payment processing system that supports multiple currencies. The system passes all functional tests, but a critical defect is reported in production. Which subtle issue is most likely to have been missed during QA?",
+    "options": [{ "text": "Incorrect currency conversion rates applied" }, { "text": "UI misalignment on the payment confirmation page" }, { "text": "Missing email notification for failed transactions" }, { "text": "Slow API response time under high load" }],
+    "correctAnswerIndex": 0,
+    "explanation": "It is the most critical, as it affects the system's core functionality and financial accuracy, yet it can be missed if QA relies solely on static test data or outdated exchange rates."
+  },
+  {
+    "id": "q10",
+    "text": "Which of the following best explains why 100% test coverage does not guarantee a bug-free application?",
+    "options": [{ "text": "Test coverage tools only measure the percentage of code that has been compiled." }, { "text": "Code coverage metrics don’t account for untested inputs, edge cases, or logic errors." }, { "text": "Automated tests always catch all possible user errors." }, { "text": "100% test coverage means the application has passed all quality gates." }],
+    "correctAnswerIndex": 1,
+    "explanation": "Achieving 100% code coverage means every line of code is executed during tests — not that every possible scenario or edge case has been tested."
+  }
+]
