@@ -19,8 +19,8 @@ function randBool() {
 }
 
 function drawStreak(streak) {
-    const endX = streak.x + 0.52532198881 * streak.length
-    const endY = streak.y + 0.52532198881 * streak.length
+    const endX = streak.x + 0.5 * streak.length
+    const endY = streak.y + 0.5 * streak.length
     context.beginPath();
     context.moveTo(streak.x, streak.y)
     context.lineTo(endX, endY);
