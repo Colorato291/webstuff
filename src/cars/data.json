@@ -461,7 +461,7 @@
           "tags": []
         },
         {
-          "car_model": "Toyota Corolla, Toyota Yaris Cross, Audi A3",
+          "car_model": "Toyota Corolla, Toyota Yaris Cross, Audi A3, VW Golf",
           "start_fee": 0,
           "time_rates": {
             "minute": 0.13,
@@ -508,6 +508,19 @@
             "day": 79.90
           },
           "distance_rate": 0.31,
+          "included_distance": 0,
+          "trip_packages": null,
+          "tags": []
+        },
+        {
+          "car_model": "VW ID Buzz",
+          "start_fee": 0,
+          "time_rates": {
+            "minute": 0.21,
+            "hour": 11.90,
+            "day": 59.90
+          },
+          "distance_rate": 0.29,
           "included_distance": 0,
           "trip_packages": null,
           "tags": []
