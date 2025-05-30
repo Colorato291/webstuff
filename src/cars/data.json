@@ -524,6 +524,19 @@
           "included_distance": 0,
           "trip_packages": null,
           "tags": []
+        },
+        {
+          "car_model": "VW Tiguan",
+          "start_fee": 0,
+          "time_rates": {
+            "minute": 0.15,
+            "hour": 6.90,
+            "day": 27.90
+          },
+          "distance_rate": 0.29,
+          "included_distance": 0,
+          "trip_packages": null,
+          "tags": []
         }
       ]
     },
