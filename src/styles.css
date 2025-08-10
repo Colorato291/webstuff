@@ -26,6 +26,7 @@ body, html {
     transform: translate(-50%, -50%);
     font-weight: 300;
     font-size: 48px;
+    z-index: 10; /* Ensure it stays above other content */
 }
 
 .cool_cat_img {
@@ -46,14 +47,17 @@ body, html {
     white-space: nowrap;
 }
 
-#about{
-    opacity: 0;
-    user-select: none;
+#content {
+    padding-top: 120px; /* Add space for the fixed welcome section */
+    padding-bottom: 100px; /* Add space at the bottom */
+}
+
+#about {
     font-weight: 300;
     font-size: 24px;
     align-self: center;
     text-align: center;
-    margin-top: 175px;
+    margin-top: 55px; /* Reduced since we now have padding-top on content */
 }
 #about p:first-of-type {
     margin-bottom: 5px;
@@ -73,8 +77,6 @@ a:visited, a:active {
 }
 
 #projects {
-    opacity: 0;
-    user-select: none;
     font-weight: 300;
     font-size: 24px;
     text-align: center;
@@ -85,8 +87,19 @@ a:visited, a:active {
     align-items: center;
 }
 
-#project-sections {
-    pointer-events: none;
+#competitions {
+    font-weight: 300;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#project-sections,
+#competition-sections {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
@@ -96,7 +109,8 @@ a:visited, a:active {
     justify-content: center;
 }
 
-.project-item {
+.project-item,
+.competition-item {
     position: relative;
     background-size: cover;
     background-position: center;
@@ -105,44 +119,67 @@ a:visited, a:active {
     border: 1px solid white;
     transition: background-size 0.3s ease;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    pointer-events: auto; /* Ensure items can receive events */
+}
+
+a.project-item,
+a.competition-item {
+    cursor: pointer;
 }
 
 .project-item .title,
-.project-item .description {
+.project-item .description,
+.competition-item .title,
+.competition-item .description {
     position: absolute;
+    top: 0;
+    bottom: 0;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     margin: 0;
     padding: 10px;
     box-sizing: border-box;
     transition: opacity 0.3s ease;
+    pointer-events: none; /* Allow events to pass through to parent for hover and clicks */
 }
 
-.project-item .title {
+.project-item .title,
+.competition-item .title {
     font-size: 20px;
     opacity: 1;
 }
 
-.project-item .description {
+.project-item .description,
+.competition-item .description {
     font-size: 16px;
     opacity: 0;
+    line-height: 1.4;
+    word-wrap: break-word;
 }
 
-.project-item:hover {
+.project-item:hover,
+.competition-item:hover {
     background-size: 110%;
 }
 
-.project-item:hover .title {
+.project-item:hover .title,
+.competition-item:hover .title {
     opacity: 0;
 }
 
-.project-item:hover .description {
+.project-item:hover .description,
+.competition-item:hover .description {
     opacity: 1;
 }
 
-.project-item::before {
+.project-item::before,
+.competition-item::before {
     content: '';
     position: absolute;
     top: 0;
@@ -151,8 +188,33 @@ a:visited, a:active {
     bottom: 0;
     background: rgba(0, 0, 0, 0.45);
     transition: background 0.3s ease;
+    pointer-events: none;
 }
 
-.project-item:hover::before {
+.project-item:hover::before,
+.competition-item:hover::before {
     background: rgba(0, 0, 0, 0.8);
+}
+
+/* Modular animation: hide all sections except welcome */
+#content > div:not(#welcome) {
+    opacity: 0;
+    transform: translateY(20px);
+    user-select: none;
+    pointer-events: none;
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Revealed state */
+#content > div.visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    user-select: auto;
+    pointer-events: auto !important;
+}
+
+/* Ensure items always have pointer events when visible */
+#content > div.visible .project-item,
+#content > div.visible .competition-item {
+    pointer-events: auto !important;
 }
