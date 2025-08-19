@@ -285,7 +285,7 @@
           "start_fee": 0.99,
           "time_rates": {
             "minute": 0.21,
-            "1 hour": 8,
+            "1 hour": 10.08,
             "3 hour": 21.17,
             "1 day": 35.99,
             "2 day": 68.37,
@@ -304,7 +304,7 @@
           "start_fee": 0.99,
           "time_rates": {
             "minute": 0.27,
-            "1 hour": 8,
+            "1 hour": 12.96,
             "3 hour": 27.22,
             "1 day": 49.27,
             "2 day": 93.61,
@@ -323,7 +323,7 @@
           "start_fee": 0.99,
           "time_rates": {
             "minute": 0.28,
-            "1 hour": 8,
+            "1 hour": 13.44,
             "3 hour": 29.22,
             "1 day": 52.68,
             "2 day": 100.09,
@@ -342,7 +342,7 @@
           "start_fee": 0.99,
           "time_rates": {
             "minute": 0.33,
-            "1 hour": 8,
+            "1 hour": 15.84,
             "3 hour": 33.26,
             "1 day": 59.55,
             "2 day": 113.14,
@@ -361,7 +361,7 @@
           "start_fee": 0.99,
           "time_rates": {
             "minute": 0.37,
-            "1 hour": 8,
+            "1 hour": 17.76,
             "3 hour": 37.30,
             "1 day": 68.40,
             "2 day": 129.97,
@@ -382,7 +382,19 @@
             "minute": 0.09,
             "1 day": 18.99
           },
-          "distance_rate": 0.29,
+          "distance_rate": 0.24,
+          "included_distance": 0,
+          "trip_packages": null,
+          "tags": null
+        },
+                {
+          "car_model": "Toyota Corolla (Altero)",
+          "start_fee": 0.99,
+          "time_rates": {
+            "minute": 0.08,
+            "1 day": 17.99
+          },
+          "distance_rate": 0.23,
           "included_distance": 0,
           "trip_packages": null,
           "tags": null
@@ -448,27 +460,27 @@
       "name": "Bolt",
       "cars": [
         {
-          "car_model": "Peugeot 208, Toyota Yaris",
+          "car_model": "Toyota Yaris",
           "start_fee": 0,
           "time_rates": {
             "minute": 0.12,
             "hour": 4.90,
             "day": 19.90
           },
-          "distance_rate": 0.27,
+          "distance_rate": 0.28,
           "included_distance": 0,
           "trip_packages": null,
           "tags": []
         },
         {
-          "car_model": "Toyota Corolla, Toyota Yaris Cross, Audi A3, VW Golf",
+          "car_model": "Toyota Corolla/Yaris Cross, Audi A3, VW Golf",
           "start_fee": 0,
           "time_rates": {
             "minute": 0.13,
             "hour": 5.90,
             "day": 20.90
           },
-          "distance_rate": 0.28,
+          "distance_rate": 0.29,
           "included_distance": 0,
           "trip_packages": null,
           "tags": []
@@ -481,20 +493,7 @@
             "hour": 5.90,
             "day": 21.90
           },
-          "distance_rate": 0.29,
-          "included_distance": 0,
-          "trip_packages": null,
-          "tags": []
-        },
-        {
-          "car_model": "Audi A4/A5",
-          "start_fee": 0,
-          "time_rates": {
-            "minute": 0.16,
-            "hour": 9.90,
-            "day": 45.90
-          },
-          "distance_rate": 0.29,
+          "distance_rate": 0.30,
           "included_distance": 0,
           "trip_packages": null,
           "tags": []
@@ -533,30 +532,23 @@
             "hour": 6.90,
             "day": 27.90
           },
-          "distance_rate": 0.29,
+          "distance_rate": 0.30,
           "included_distance": 0,
           "trip_packages": null,
           "tags": []
-        }
-      ]
-    },
-    {
-      "name": "Avis Now",
-      "cars": [
-        {
-          "car_model": "Cupra Born",
+        },
+                {
+          "car_model": "VW Tayron",
           "start_fee": 0,
           "time_rates": {
             "minute": 0.12,
-            "hour": 4.99,
-            "day": 24.5
+            "hour": 6.90,
+            "day": 27.90
           },
-          "distance_rate": 0.22,
+          "distance_rate": 0.30,
           "included_distance": 0,
           "trip_packages": null,
-          "tags": [
-            "EV"
-          ]
+          "tags": []
         }
       ]
     },
