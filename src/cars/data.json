@@ -376,7 +376,7 @@
           "tags": ["EV", "LIM"]
         },
         {
-          "car_model": "Toyota C-HR (MESA)",
+          "car_model": "Toyota C-HR (MESA) / Nissan Qashqai (Credit24)",
           "start_fee": 0.99,
           "time_rates": {
             "minute": 0.09,
