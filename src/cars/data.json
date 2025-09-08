@@ -405,7 +405,7 @@
           "time_rates": {
             "1 day": 19.97
           },
-          "distance_rate": 0.12,
+          "distance_rate": 0.14,
           "included_distance": 0,
           "trip_packages": null,
           "tags": null
@@ -416,18 +416,18 @@
           "time_rates": {
             "1 day": 21.63
           },
-          "distance_rate": 0.12,
+          "distance_rate": 0.14,
           "included_distance": 0,
           "trip_packages": null,
           "tags": null
         },
         {
-          "car_model": "(Sepcial) Toyota C-HR, Nissan Qashqai",
+          "car_model": "(Special) Toyota C-HR, Nissan Qashqai",
           "start_fee": 0,
           "time_rates": {
             "1 day": 24.97
           },
-          "distance_rate": 0.12,
+          "distance_rate": 0.14,
           "included_distance": 0,
           "trip_packages": null,
           "tags": null
@@ -438,7 +438,7 @@
           "time_rates": {
             "1 day": 29.97
           },
-          "distance_rate": 0.12,
+          "distance_rate": 0.14,
           "included_distance": 0,
           "trip_packages": null,
           "tags": ["EV"]
@@ -449,7 +449,7 @@
           "time_rates": {
             "1 day": 33.30
           },
-          "distance_rate": 0.12,
+          "distance_rate": 0.14,
           "included_distance": 0,
           "trip_packages": null,
           "tags": ["EV"]
