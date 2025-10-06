@@ -7,7 +7,7 @@
           "car_model": "All cars",
           "start_fee": 0.44,
           "time_rates": {
-            "minute": 0.14,
+            "minute": 0.13,
             "hour": 6.19,
             "day": 22.99
           },
