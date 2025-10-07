@@ -269,7 +269,12 @@ function getBestPackage(car, time, kilometers, companyName) {
                 bestCombo = [packageName, ...subResult.combo];
             }
         }
-        const result = { price: bestPrice, combo: bestCombo };
+
+        if (document.getElementById('refuel_discount_enabled').checked === true) {
+            bestPrice = bestPrice - car.refuel_discount;
+        }
+
+        const result = { price: parseFloat(bestPrice).toFixed(2), combo: bestCombo};
         cache.set(key, result);
         return result;
     }
@@ -352,13 +357,16 @@ async function priceCalculations(inputData){
                 Math.max(kilometers-included_distance, 0)
             );
 
-            const total_price = parseFloat(distance_price + time_price + car.start_fee).toFixed(2);
+            let total_price = parseFloat(distance_price + time_price + car.start_fee).toFixed(2);
+            if (document.getElementById('refuel_discount_enabled').checked === true) {
+                total_price = total_price - car.refuel_discount;
+            }
             
             if (included_distance < kilometers) optimal_duration += ` + ${kilometers} km`;
             const car_model = (car.tags !== null && car.tags.includes('EV')) ? car.car_model + ' ⚡︎' : car.car_model;
             
             result_data_payload.push(
-                [company.name, car_model, optimal_duration, total_price]
+                [company.name, car_model, optimal_duration, parseFloat(total_price).toFixed(2)]
             );
             if(car.trip_packages !== null) {
                 const bestPackage = getBestPackage(car, input_in_mins, kilometers, company.name);
